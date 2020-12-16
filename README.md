@@ -1,3 +1,3 @@
 # Гражданская поэтическая инициатива
 
-https://thedoft.github.io/ya.p-hackathon-2025/
+https://thedoft.github.io/yap-hackathon-2025/
