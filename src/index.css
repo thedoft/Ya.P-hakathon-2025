@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import './blocks/page/page.css';
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import './blocks/header/header.css';
+@import './blocks/header/__select/header__select.css';
+@import './blocks/header/__input/header__input.css';
+@import './blocks/header/__sign-wrapper/header__sign-wrapper.css';
+@import './blocks/header/__sign-button/header__sign-button.css';
+@import './blocks/header/__sign-link/header__sign-link.css';
+
+@import './blocks/main/main.css';
+@import './blocks/footer/footer.css';
+
+@import './blocks/menu-list/menu__list.css';
+@import './blocks/menu-list/__item/menu__item.css';
+@import './blocks/menu-list/__link/menu-list__link.css';
+
+@import './blocks/section/section.css';
+@import './blocks/section/__list/section__list.css';
+
+@import './blocks/info-list/info-list.css';
+
+* {
+  border: red 1px solid;
 }
