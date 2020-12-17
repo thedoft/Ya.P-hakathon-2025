@@ -1,4 +1,5 @@
 import React from 'react';
+import Form from './Form';
 
 export default function Main() {
   return (
@@ -66,11 +67,8 @@ export default function Main() {
           Поделитесь идеями развития вашего района или расскажите о его проблемах — ни одно обращение не останется без внимания. За прогрессом рассмотрения каждого обращения можете наблюдать в разделе Обращения
         </p>
 
-        <form action="#">
-
-        </form>
+        <Form />
       </section>
-
     </main>
   )
 }
