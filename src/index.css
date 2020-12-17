@@ -22,6 +22,10 @@
 @import './blocks/info-list/info-list.css';
 
 @import './blocks/form/form.css';
+@import './blocks/form/__input/form__input.css';
+@import './blocks/form/__file-container/form__file-container.css';
+
+
 
 @import './blocks/footer/footer.css';
 @import './blocks/footer/__wraper/footer__wraper.css';

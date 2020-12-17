@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <header className="header">
-      <img src="#" alt="#" class="logo" />
+      <img src="#" alt="#" className="logo" />
 
       <select className="header__select">
         <option value="">--- Ваш город ---</option>
