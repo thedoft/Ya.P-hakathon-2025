@@ -8,7 +8,6 @@
 @import './blocks/header/__sign-link/header__sign-link.css';
 
 @import './blocks/main/main.css';
-@import './blocks/footer/footer.css';
 
 @import './blocks/menu-list/menu__list.css';
 @import './blocks/menu-list/__item/menu__item.css';
@@ -19,6 +18,10 @@
 
 @import './blocks/info-list/info-list.css';
 
-* {
-  border: red 1px solid;
-}
+
+
+
+@import './blocks/footer/footer.css';
+@import './blocks/copyright/copyright.css';
+@import './blocks/copyright/__text/copyright__text.css';
+@import './blocks/copyright/__sympol/copyright__sympol.css';
