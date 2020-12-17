@@ -1,0 +1,17 @@
+.form__input {
+  width: 100%;
+  min-height: 56px;
+  background: #c4c4c4;
+  border: none;
+  box-sizing: border-box;
+  margin: 0 0 36px;
+  opacity: .6;
+}
+
+.form__input::placeholder {
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  opacity: .4;
+}
