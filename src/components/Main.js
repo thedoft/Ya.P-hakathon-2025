@@ -2,6 +2,11 @@ import React from 'react';
 import Form from './Form';
 
 export default function Main() {
+
+  function handleSectionButtonClick() {
+    alert('Скоро покажем больше :)')
+  }
+
   return (
     <main className="main">
       <section className="section section_home">
@@ -25,11 +30,11 @@ export default function Main() {
         </ul>
 
         <a href="#form" className="home-section__link">
-          <button className="home-section__button">Создать обращение</button>
+          <button type="button" className="home-section__button">Создать обращение</button>
         </a>
       </section>
 
-      <section className="section">
+      <section className="section" id="news">
         <h2 className="section__title">Новости</h2>
 
         <ul className="section__list">
@@ -40,10 +45,10 @@ export default function Main() {
           <li className="card card_small"></li>
         </ul>
 
-        <button type="button" className="section__button">Больше новостей</button>
+        <button type="button" className="section__button" onClick={handleSectionButtonClick}>Больше новостей</button>
       </section>
 
-      <section className="section">
+      <section className="section" id="ask">
         <h2 className="section__title">Недавние обращения</h2>
 
         <ul className="info-list">
@@ -58,7 +63,7 @@ export default function Main() {
           <li className="card card_big"></li>
         </ul>
 
-        <button type="button" className="section__button">Больше обращений</button>
+        <button type="button" className="section__button" onClick={handleSectionButtonClick}>Больше обращений</button>
       </section>
 
       <section className="section" id="form">

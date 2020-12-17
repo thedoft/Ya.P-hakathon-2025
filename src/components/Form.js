@@ -1,9 +1,15 @@
 import React from 'react';
 
 export default function Form() {
+  
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    alert('Ваше обращение отправлено!');
+  }
+
   return (
-    <form className="form" action="#">
-      <input className="form__input" placeholder="Введите адрес" />
+    <form className="form" action="#" onSubmit={handleSubmit}>
+      <input className="form__input" placeholder="Введите адрес" required />
 
       <select className="form__select">
         <option value="">Введите название обращения</option>
@@ -11,10 +17,11 @@ export default function Form() {
         <option value="2">2</option>
       </select>
 
-      <input className="form__textarea" type="textarea"
-        placeholder="`Введите название обращения
+      <textarea className="form__textarea"
+        placeholder="Введите название обращения
           Пожалуйста, придерживайтесь правила 1 обращение — 1 идея.
-          В противном случае обращение будет отклонено`"
+          В противном случае обращение будет отклонено"
+        required
       />
 
       <div className="form__file-container">

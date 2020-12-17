@@ -1,6 +1,11 @@
 import React from 'react';
 
 export default function Header() {
+
+  function handleClick() {
+    alert('Здесь будет форма авторизации');
+  }
+
   return (
     <header className="header">
       <img src="#" alt="#" class="logo" />
@@ -19,16 +24,16 @@ export default function Header() {
             <a href="/" className="menu__link">Главная</a>
           </li>
           <li className="menu-list__item">
-            <a href="##" className="menu__link">Обращения</a>
+            <a href="#ask" className="menu__link">Обращения</a>
           </li>
           <li className="menu-list__item">
-            <a href="###" className="menu__link">Новости</a>
+            <a href="#news" className="menu__link">Новости</a>
           </li>
         </ul>
       </nav>
 
       <div className="header__sign-wrapper">
-        <button type="button" className="header__sign-button">Войти</button>
+        <button type="button" className="header__sign-button" onClick={handleClick}>Войти</button>
         <a href="####" className="header__sign-link">Зарегистрироваться</a>
       </div>
     </header>
