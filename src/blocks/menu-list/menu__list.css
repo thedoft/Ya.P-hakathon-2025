@@ -1,6 +1,8 @@
 .menu-list {
-  display: flex;
-  justify-content: space-between;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 28px;
   list-style: none;
   margin: 0;
   padding: 0;

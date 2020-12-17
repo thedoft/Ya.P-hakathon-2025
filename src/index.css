@@ -3,6 +3,7 @@
 @import './blocks/page/page.css';
 
 @import './blocks/header/header.css';
+@import './blocks/logo/logo.css';
 @import './blocks/header/__select/header__select.css';
 @import './blocks/header/__input/header__input.css';
 @import './blocks/header/__sign-wrapper/header__sign-wrapper.css';
@@ -23,6 +24,8 @@
 @import './blocks/form/form.css';
 
 @import './blocks/footer/footer.css';
+@import './blocks/footer/__wraper/footer__wraper.css';
 @import './blocks/copyright/copyright.css';
-@import './blocks/copyright/__text/copyright__text.css';
+@import './blocks/copyright/__content/copyright__content.css';
 @import './blocks/copyright/__sympol/copyright__sympol.css';
+@import './blocks/copyright/__text/copyright__text.css';
