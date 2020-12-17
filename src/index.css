@@ -1,3 +1,6 @@
+@import './vendor/normalize.css';
+@import './vendor/fonst/Roboto/roboto.css';
+
 @import './blocks/page/page.css';
 
 @import './blocks/header/header.css';
@@ -22,6 +25,7 @@
 
 
 @import './blocks/footer/footer.css';
+@import './blocks/footer/__wraper/footer__wraper.css';
 @import './blocks/copyright/copyright.css';
 @import './blocks/copyright/__text/copyright__text.css';
 @import './blocks/copyright/__sympol/copyright__sympol.css';
