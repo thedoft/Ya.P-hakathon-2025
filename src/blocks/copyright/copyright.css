@@ -1,5 +1,5 @@
 .copyright{
   display: grid;
   grid-template-columns: auto 1fr;
-  gap:8px;
+  gap:28px;
 }
