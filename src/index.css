@@ -17,6 +17,12 @@
 @import './blocks/menu-list/__link/menu-list__link.css';
 
 @import './blocks/section/section.css';
+@import './blocks/section/section_home.css';
+@import './blocks/section/__title/section__title.css';
+@import './blocks/section/__title/section__title_home.css';
+@import './blocks/section/__title/section__title_form.css';
+@import './blocks/section/__subtitle/section__subtitle.css';
+@import './blocks/section/__link/section__link.css';
 @import './blocks/section/__list/section__list.css';
 
 @import './blocks/info-list/info-list.css';
@@ -25,8 +31,10 @@
 @import './blocks/form/__input/form__input.css';
 @import './blocks/form/__input/_type/form__input_type_textarea.css';
 @import './blocks/form/__input/_type/form__input_type_radio.css';
+@import './blocks/form/__input/_type/form__input_type_file.css';
 @import './blocks/form/__label/form__label.css';
 @import './blocks/form/__label/_type/form__label_type_radio.css';
+@import './blocks/form/__label/_type/form__label_type_file.css';
 @import './blocks/form/__require-accent/form__require-accent.css';
 
 @import './blocks/form/__file-container/form__file-container.css';
