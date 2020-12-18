@@ -8,5 +8,5 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('page')
+  document.getElementById('app')
 );

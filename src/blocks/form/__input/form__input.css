@@ -2,10 +2,12 @@
   width: 100%;
   min-height: 56px;
   background: #c4c4c4;
-  border: none;
   box-sizing: border-box;
   margin: 0 0 36px;
   opacity: .6;
+  border: none;
+  border-radius: 15px;
+  padding: 19px 24px;
 }
 
 .form__input::placeholder {
