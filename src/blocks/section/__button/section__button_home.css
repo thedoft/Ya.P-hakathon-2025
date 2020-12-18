@@ -1,0 +1,9 @@
+.section__button_home {
+  width: 542px;
+  min-height: 93px;
+  border: none;
+  font-size: 32px;
+  line-height: 37px;
+  background: #9b9b9b;
+  border-radius: 45px;
+}

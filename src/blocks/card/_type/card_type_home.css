@@ -1,0 +1,20 @@
+.card_type_home {
+  padding: 12px;
+  background-color: #e1e1e1;
+  width: 164px;
+  min-height: 132px;
+  position: relative;
+}
+
+.card_type_home + .card_type_home::before {
+  position: absolute;
+  left: -28px;
+  width: 28px;
+  height: 28px;
+  content: "";
+  background-image:url(../../../images/ArrowFatRight.svg);
+}
+
+.card_type_home+.card_type_home {
+  margin-left: 28px;
+}

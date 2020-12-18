@@ -24,6 +24,24 @@
 @import './blocks/section/__subtitle/section__subtitle.css';
 @import './blocks/section/__link/section__link.css';
 @import './blocks/section/__list/section__list.css';
+@import './blocks/section/__list/section__list_home.css';
+@import './blocks/section/__button/section__button.css';
+@import './blocks/section/__button/section__button_home.css';
+
+@import './blocks/card/card.css';
+@import './blocks/card/_type/card_type_home.css';
+@import './blocks/card/_type/card_type_small.css';
+@import './blocks/card/__img/card__img.css';
+@import './blocks/card/__text-wrapper/card__text-wrapper.css';
+@import './blocks/card/__gradient-wrapper/card__gradient-wrapper.css';
+@import './blocks/card/__text/card__text.css';
+@import './blocks/card/__text/card__text_home.css';
+@import './blocks/card/__content/card__content.css';
+@import './blocks/card/__info/card__info.css';
+@import './blocks/card/__title/card__title.css';
+@import './blocks/card/__date/card__date.css';
+
+
 
 @import './blocks/info-list/info-list.css';
 

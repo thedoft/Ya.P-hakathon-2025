@@ -1,0 +1,7 @@
+.card__content {
+  background-color: #fff;
+  padding: 28px 28px 0;
+  max-height: 124px;
+  border-bottom-right-radius: 30px;
+  position: relative;
+}

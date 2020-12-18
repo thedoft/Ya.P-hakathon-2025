@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from './Form';
+import cardImg from '../images/card-img.png';
 
 export default function Main() {
 
@@ -14,23 +15,23 @@ export default function Main() {
           Гражданская поэтическая инициатива — платформа городских улучшений, где каждый будет услышан
         </h1>
 
-        <ul className="section__list">
-          <li className="home-card">
-            <p className="home-card__text">Проявите инициативу</p>
+        <ul className="section__list section__list_home">
+          <li className="card card_type_home">
+            <p className="card__text card__text_home">Проявите инициативу</p>
           </li>
-          <li className="home-card">
-            <p className="home-card__text">Заполните форму обращения на сайте</p>
+          <li className="card card_type_home">
+            <p className="card__text card__text_home">Заполните форму обращения на сайте</p>
           </li>
-          <li className="home-card">
-            <p className="home-card__text">Отслеживайте процесс рассмотрения</p>
+          <li className="card card_type_home">
+            <p className="card__text card__text_home">Отслеживайте процесс рассмотрения</p>
           </li>
-          <li className="home-card">
-            <p className="home-card__text">Оцените результат работы или подайте аппеляцию</p>
+          <li className="card card_type_home">
+            <p className="card__text card__text_home">Оцените результат работы или подайте аппеляцию</p>
           </li>
         </ul>
 
-        <a href="#form" className="home-section__link">
-          <button type="button" className="home-section__button">Создать обращение</button>
+        <a href="#form" className="section__link section__link_home">
+          <button type="button" className="section__button section__button_home">Создать обращение</button>
         </a>
       </section>
 
@@ -38,11 +39,81 @@ export default function Main() {
         <h2 className="section__title">Новости</h2>
 
         <ul className="section__list">
-          <li className="card card_small"></li>
-          <li className="card card_small"></li>
-          <li className="card card_small"></li>
-          <li className="card card_small"></li>
-          <li className="card card_small"></li>
+          <li className="card card_type_small">
+            <img className="card__img card__img_small" src={cardImg} alt="#" />
+            <div className="card__content">
+              <div className="card__info">
+                <h3 className="card__title">Название</h3>
+                <p className="card__date">15.11.2025</p>
+              </div>
+              <div className="card__text-wrapper">
+                <p className="card__text">
+                  стартовал проект «Время природы», который посвящен экологическим вопросам столицы. реализация намеченных плановых заданий требуют определения и уточнения новыхреализация намеченных плановых заданий требуют определения и уточнения новых реализация намеченных плановых заданий требуют определения и уточнения новыхреализация намеченных плановых заданий требуют определения и уточнения новых
+                </p>
+              </div>
+              <div className="card__gradient-wrapper"></div>
+            </div>
+          </li>
+          <li className="card card_type_small">
+            <img className="card__img card__img_small" src={cardImg} alt="#" />
+            <div className="card__content">
+              <div className="card__info">
+                <h3 className="card__title">Название</h3>
+                <p className="card__date">15.11.2025</p>
+              </div>
+              <div className="card__text-wrapper">
+                <p className="card__text">
+                  стартовал проект «Время природы», который посвящен экологическим вопросам столицы. реализация намеченных плановых заданий требуют определения и уточнения новыхреализация намеченных плановых заданий требуют определения и уточнения новых реализация намеченных плановых заданий требуют определения и уточнения новыхреализация намеченных плановых заданий требуют определения и уточнения новых
+                </p>
+              </div>
+              <div className="card__gradient-wrapper"></div>
+            </div>
+          </li>
+          <li className="card card_type_small">
+            <img className="card__img card__img_small" src={cardImg} alt="#" />
+            <div className="card__content">
+              <div className="card__info">
+                <h3 className="card__title">Название</h3>
+                <p className="card__date">15.11.2025</p>
+              </div>
+              <div className="card__text-wrapper">
+                <p className="card__text">
+                  стартовал проект «Время природы», который посвящен экологическим вопросам столицы. реализация намеченных плановых заданий требуют определения и уточнения новыхреализация намеченных плановых заданий требуют определения и уточнения новых реализация намеченных плановых заданий требуют определения и уточнения новыхреализация намеченных плановых заданий требуют определения и уточнения новых
+                </p>
+              </div>
+              <div className="card__gradient-wrapper"></div>
+            </div>
+          </li>
+          <li className="card card_type_small">
+            <img className="card__img card__img_small" src={cardImg} alt="#" />
+            <div className="card__content">
+              <div className="card__info">
+                <h3 className="card__title">Название</h3>
+                <p className="card__date">15.11.2025</p>
+              </div>
+              <div className="card__text-wrapper">
+                <p className="card__text">
+                  стартовал проект «Время природы», который посвящен экологическим вопросам столицы. реализация намеченных плановых заданий требуют определения и уточнения новыхреализация намеченных плановых заданий требуют определения и уточнения новых реализация намеченных плановых заданий требуют определения и уточнения новыхреализация намеченных плановых заданий требуют определения и уточнения новых
+                </p>
+              </div>
+              <div className="card__gradient-wrapper"></div>
+            </div>
+          </li>
+          <li className="card card_type_small">
+            <img className="card__img card__img_small" src={cardImg} alt="#" />
+            <div className="card__content">
+              <div className="card__info">
+                <h3 className="card__title">Название</h3>
+                <p className="card__date">15.11.2025</p>
+              </div>
+              <div className="card__text-wrapper">
+                <p className="card__text">
+                  стартовал проект «Время природы», который посвящен экологическим вопросам столицы. реализация намеченных плановых заданий требуют определения и уточнения новыхреализация намеченных плановых заданий требуют определения и уточнения новых реализация намеченных плановых заданий требуют определения и уточнения новыхреализация намеченных плановых заданий требуют определения и уточнения новых
+                </p>
+              </div>
+              <div className="card__gradient-wrapper"></div>
+            </div>
+          </li>
         </ul>
 
         <button type="button" className="section__button" onClick={handleSectionButtonClick}>Больше новостей</button>

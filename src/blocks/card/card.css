@@ -1,7 +1,9 @@
-.section {
+.card {
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 57px 158px;
+  justify-content: center;
   box-sizing: border-box;
+  width: 356px;
 }

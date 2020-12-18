@@ -68,7 +68,7 @@ export default function Form() {
 
       <div className="form__file-container">
         <div className="form__file-button">
-          <label forHtml="file" className="form__label form__label_type_file">Добавить файл</label>
+          <label htmlFor="file" className="form__label form__label_type_file">Добавить файл</label>
           <input type="file" className="form__input form__input_type_file" id="file" />
         </div>
         <p className="form__file-text">Можно добавить до 5 файлов. Общий объем не более 1 Гб</p>
