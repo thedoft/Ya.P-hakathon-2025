@@ -2,10 +2,6 @@ import React from 'react';
 import Select from 'react-select';
 
 import logo from '../images/logo.svg';
-<<<<<<< HEAD
-
-=======
->>>>>>> f57aae0fa501dd4d63ebbe0cb60dcf48ca77b623
 
 export default function Header() {
 
@@ -28,13 +24,6 @@ export default function Header() {
 			color: '#000',
 			width: 138
 		}),
-<<<<<<< HEAD
-=======
-		indicatorContainer: (provided) => ({
-			...provided,
-			fill : 'black',
-		}),
->>>>>>> f57aae0fa501dd4d63ebbe0cb60dcf48ca77b623
 		singleValue: (provided) => ({
 			...provided,
 			color : '#000',
@@ -60,12 +49,7 @@ export default function Header() {
     <header className="header">
 			<div className="header__wraper">
 				<img src={logo} alt="#" className="logo" />
-<<<<<<< HEAD
 				<div className="location">
-=======
-
-        <div className="location">
->>>>>>> f57aae0fa501dd4d63ebbe0cb60dcf48ca77b623
 					<Select id="title"
 						styles={customStyles}
 						options={options}
