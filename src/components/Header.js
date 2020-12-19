@@ -11,9 +11,6 @@ export default function Header() {
 	];
 
 	const customStyles = {
-    option: (provided) => ({
-      ...provided,
-    }),
     container: (provided) => ({
       ...provided,
       minWidth: 150
@@ -27,13 +24,10 @@ export default function Header() {
 			color: '#000',
 			width: 138
 		}),
-
 		indicatorContainer: (provided) => ({
 			...provided,
 			fill : 'black',
 		}),
-
-
 		singleValue: (provided) => ({
 			...provided,
 			color : '#000',
@@ -41,7 +35,6 @@ export default function Header() {
 			whiteSpace : 'nowrap',
 			overflow : 'hidden'
 		}),
-
     placeholder: (provided) => ({
       ...provided,
 			opacity: .4,
@@ -60,7 +53,8 @@ export default function Header() {
     <header className="header">
 			<div className="header__wraper">
 				<img src={logo} alt="#" className="logo" />
-				<div className="location">
+
+        <div className="location">
 					<Select id="title"
 						styles={customStyles}
 						options={options}
