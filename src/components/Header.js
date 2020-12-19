@@ -1,8 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
 
-import logo from '../images/logo.svg';
-
 export default function Header() {
 
 	const options =[
@@ -48,7 +46,7 @@ export default function Header() {
   return (
     <header className="header">
 			<div className="header__wraper">
-				<img src={logo} alt="#" className="logo" />
+				<img src="./logo.png" alt="#" className="logo" />
 				<div className="location">
 					<Select id="title"
 						styles={customStyles}
