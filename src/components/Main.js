@@ -48,10 +48,9 @@ export default function Main() {
       <section className="section" id="ask">
         <h2 className="section__title">Недавние обращения</h2>
 
-        <ul className="info-list">
-          <li className="info-list__item"></li>
-          <li className="info-list__item"></li>
-          <li className="info-list__item"></li>
+        <ul className="section__list section__list_info
+        ">
+
         </ul>
 
         <ul className="section__list">
