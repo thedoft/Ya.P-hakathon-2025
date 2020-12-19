@@ -3,11 +3,13 @@ import React from 'react';
 import CardHome from './CardHome';
 import CardSmall from './CardSmall';
 import CardBig from './CardBig';
+import InfoItem from './InfoItem';
 import Form from './Form';
 
 import { cardsHome } from '../data/cardsHome';
 import { cardsSmall } from '../data/cardsSmall';
 import { cardsBig } from '../data/cardsBig';
+import { infoItems } from '../data/infoItems';
 
 export default function Main() {
 
@@ -48,9 +50,10 @@ export default function Main() {
       <section className="section" id="ask">
         <h2 className="section__title">Недавние обращения</h2>
 
-        <ul className="section__list section__list_info
-        ">
-
+        <ul className="section__list section__list_info">
+          {infoItems.map((item, index) => (
+            <InfoItem item={item} key={index} />
+          ))}
         </ul>
 
         <ul className="section__list">
