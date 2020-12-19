@@ -4,7 +4,6 @@
   padding-left: 27px;
   border: 1px solid  #c4c4c4;
   margin: 0 28px 25px 0;
-  display: grid;
 }
 
 .card_type_small:nth-child(3n) {
