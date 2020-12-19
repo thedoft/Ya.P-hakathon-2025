@@ -3,7 +3,8 @@
   text-decoration: none;
   font-family: inherit;
   font-size: 16px;
-  line-height: 19px;
+	line-height: 19px;
+	opacity: 0.7;
 }
 
 .menu-list__link:hover{

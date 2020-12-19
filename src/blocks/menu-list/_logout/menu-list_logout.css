@@ -1,0 +1,4 @@
+.menu-list_logout{
+	grid-template-columns: repeat(3, auto);
+	gap: 32px;
+}
