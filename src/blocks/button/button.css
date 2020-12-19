@@ -1,3 +1,6 @@
 .button{
-	cursor: pointer;
+  cursor: pointer;
+  /* эт я добавил, общие для всех кнопок */
+  padding: 0;
+  border-radius: 30px;
 }

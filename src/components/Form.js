@@ -1,6 +1,8 @@
 import React from 'react';
 import Select from 'react-select';
 
+import Button from './Button';
+
 export default function Form() {
   const options = [
     { value : 'Название 1', label : 'Название 1' },
@@ -88,7 +90,7 @@ export default function Form() {
         <label className="form__label form__label_type_radio" htmlFor="people">Людям</label>
       </div>
 
-      <button className="form__submit-button">Создать обращение</button>
+      <Button type="submit" class="form__submit-button" text="Создать обращение" onClick={() => {}} />
     </form>
   )
 }

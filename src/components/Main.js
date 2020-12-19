@@ -5,6 +5,7 @@ import CardSmall from './CardSmall';
 import CardBig from './CardBig';
 import InfoItem from './InfoItem';
 import Form from './Form';
+import Button from './Button';
 
 import { cardsHome } from '../data/cardsHome';
 import { cardsSmall } from '../data/cardsSmall';
@@ -31,7 +32,7 @@ export default function Main() {
         </ul>
 
         <a href="#form" className="section__link section__link_home">
-          <button type="button" className="section__button section__button_home">Создать обращение</button>
+          <Button type="button" class="section__button section__button_home" text="Создать обращение" onClick={() => {}} />
         </a>
       </section>
 
@@ -44,7 +45,7 @@ export default function Main() {
           ))}
         </ul>
 
-        <button type="button" className="section__button" onClick={handleSectionButtonClick}>Больше новостей</button>
+        <Button type="button" class="section__button" onClick={handleSectionButtonClick} text="Больше новостей" />
       </section>
 
       <section className="section" id="ask">
@@ -62,7 +63,7 @@ export default function Main() {
           ))}
         </ul>
 
-        <button type="button" className="section__button" onClick={handleSectionButtonClick}>Больше обращений</button>
+        <Button type="button" class="section__button" onClick={handleSectionButtonClick} text="Больше обращений" />
       </section>
 
       <section className="section" id="form">
