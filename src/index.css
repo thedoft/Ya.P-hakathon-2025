@@ -17,6 +17,14 @@
 
 @import './blocks/main/main.css';
 
+@import './blocks/button/button.css';
+@import './blocks/button/_type/button_type_close.css';
+
+
+@import './blocks/popup/popup.css';
+@import './blocks/popup/__block/popup__block.css';
+@import './blocks/popup/_hidden/popup_hidden.css';
+
 @import './blocks/menu-list/menu__list.css';
 @import './blocks/menu-list/__item/menu__item.css';
 @import './blocks/menu-list/__link/menu-list__link.css';

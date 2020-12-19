@@ -1,6 +1,8 @@
 import React from 'react';
 import Select from 'react-select';
 
+import logo from '../images/logo.svg';
+
 
 export default function Header() {
 
@@ -26,13 +28,6 @@ export default function Header() {
 			color: '#000',
 			width: 138
 		}),
-
-		indicatorContainer: (provided) => ({
-			...provided,
-			fill : 'black',
-		}),
-		
-
 		singleValue: (provided) => ({
 			...provided,
 			color : '#000',
@@ -51,25 +46,25 @@ export default function Header() {
     })
   }
 
-  function handleClick() {
-    alert('Здесь будет форма авторизации');
+  function handleRegistration() {
+    document.querySelector('#registration').classList.remove('popup_hidden')
   }
 
   return (
     <header className="header">
 			<div className="header__wraper">
-				<img src="/static/media/logo.daf1334c.svg" alt="#" className="logo" />
+				<img src={logo} alt="#" className="logo" />
 				<div className="location">
 					<Select id="title"
 						styles={customStyles}
 						options={options}
-						placeholder='- Ваш город -'
+						placeholder='Ваш город'
 						required />
 				</div>
 
 				<div class="search">
 					<input type="text" className="header__input" placeholder="Поиск" />
-					<button class="search__button" aria-label="Поиск" type="button"></button>
+					<button className="search__button" aria-label="Поиск" type="button"></button>
 				</div>
 
 				<nav className="header__nav">
@@ -87,7 +82,7 @@ export default function Header() {
 				</nav>
 
 				<div className="header__sign-wrapper">
-					<button type="button" className="header__sign-button" onClick={handleClick}>Войти</button>
+					<button type="button" className="header__sign-button" onClick={handleRegistration}>Войти</button>
 					<a href="####" className="header__sign-link">Зарегистрироваться</a>
 				</div>
 			</div>
