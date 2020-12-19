@@ -2,7 +2,9 @@
   font-weight: bold;
   font-size: 20px;
   line-height: 23px;
-  letter-spacing: 5%;
+  letter-spacing: .05em;
   padding: 0;
   margin: 0;
+  text-align: left;
+  max-width: calc(100% - 60px);
 }

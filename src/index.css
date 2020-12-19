@@ -38,19 +38,25 @@
 @import './blocks/card/card.css';
 @import './blocks/card/_type/card_type_home.css';
 @import './blocks/card/_type/card_type_small.css';
+@import './blocks/card/_type/card_type_big.css';
 @import './blocks/card/__img/card__img.css';
-@import './blocks/card/__text-wrapper/card__text-wrapper.css';
 @import './blocks/card/__gradient-wrapper/card__gradient-wrapper.css';
+@import './blocks/card/__gradient/card__gradient.css';
+@import './blocks/card/__text-wrapper/card__text-wrapper.css';
+@import './blocks/card/__text-wrapper/card__text-wrapper_small.css';
+@import './blocks/card/__text-wrapper/card__text-wrapper_big.css';
 @import './blocks/card/__text/card__text.css';
 @import './blocks/card/__text/card__text_home.css';
 @import './blocks/card/__content/card__content.css';
+@import './blocks/card/__content/card__content_small.css';
+@import './blocks/card/__content/card__content_big.css';
 @import './blocks/card/__info/card__info.css';
 @import './blocks/card/__title/card__title.css';
 @import './blocks/card/__date/card__date.css';
-
-
+@import './blocks/card/__address/card__address.css';
 
 @import './blocks/info-list/info-list.css';
+
 
 @import './blocks/form/form.css';
 @import './blocks/form/__input/form__input.css';
@@ -68,7 +74,6 @@
 @import './blocks/form/__text/form__text.css';
 @import './blocks/form/__radio-container/form__radio-container.css';
 @import './blocks/form/__submit-button/form__submit-button.css';
-
 
 @import './blocks/footer/footer.css';
 @import './blocks/footer/__wraper/footer__wraper.css';

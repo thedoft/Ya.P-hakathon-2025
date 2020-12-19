@@ -11,10 +11,6 @@
   left: -28px;
   width: 28px;
   height: 28px;
-  content: "";
-  background-image:url(../../../images/ArrowFatRight.svg);
-}
-
-.card_type_home+.card_type_home {
-  margin-left: 28px;
+  content: '';
+  background-image: url(../../../images/ArrowFatRight.svg);
 }
