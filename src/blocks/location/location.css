@@ -1,0 +1,6 @@
+.location{
+	background: url('../../images/map-icon.svg') left center no-repeat;
+	padding-left: 34px;
+	max-width: 130px;
+	margin-left: 25px;
+}
