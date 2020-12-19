@@ -8,8 +8,13 @@ export default function Form() {
   ];
 
   const customStyles = {
-    option: (provided) => ({
+    singleValue: (provided) => ({
       ...provided,
+      color: '#000'
+    }),
+    menu:(provided) => ({
+      ...provided,
+      zIndex: 2
     }),
     container: (provided) => ({
       ...provided,

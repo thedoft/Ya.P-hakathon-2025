@@ -1,0 +1,9 @@
+.info-item__num {
+  width: 160px;
+  font-size: 64px;
+  line-height: 77px;
+  font-weight: 700;
+  color: #aa1717;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-right: 8px;
+}

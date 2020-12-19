@@ -2,7 +2,10 @@ import React from 'react';
 import Select from 'react-select';
 
 import logo from '../images/logo.svg';
+<<<<<<< HEAD
 
+=======
+>>>>>>> f57aae0fa501dd4d63ebbe0cb60dcf48ca77b623
 
 export default function Header() {
 
@@ -12,9 +15,6 @@ export default function Header() {
 	];
 
 	const customStyles = {
-    option: (provided) => ({
-      ...provided,
-    }),
     container: (provided) => ({
       ...provided,
       minWidth: 150
@@ -28,6 +28,13 @@ export default function Header() {
 			color: '#000',
 			width: 138
 		}),
+<<<<<<< HEAD
+=======
+		indicatorContainer: (provided) => ({
+			...provided,
+			fill : 'black',
+		}),
+>>>>>>> f57aae0fa501dd4d63ebbe0cb60dcf48ca77b623
 		singleValue: (provided) => ({
 			...provided,
 			color : '#000',
@@ -35,7 +42,6 @@ export default function Header() {
 			whiteSpace : 'nowrap',
 			overflow : 'hidden'
 		}),
-
     placeholder: (provided) => ({
       ...provided,
 			opacity: .4,
@@ -54,7 +60,12 @@ export default function Header() {
     <header className="header">
 			<div className="header__wraper">
 				<img src={logo} alt="#" className="logo" />
+<<<<<<< HEAD
 				<div className="location">
+=======
+
+        <div className="location">
+>>>>>>> f57aae0fa501dd4d63ebbe0cb60dcf48ca77b623
 					<Select id="title"
 						styles={customStyles}
 						options={options}
@@ -62,7 +73,7 @@ export default function Header() {
 						required />
 				</div>
 
-				<div class="search">
+				<div className="search">
 					<input type="text" className="header__input" placeholder="Поиск" />
 					<button className="search__button" aria-label="Поиск" type="button"></button>
 				</div>
@@ -77,7 +88,7 @@ export default function Header() {
 						</li>
 						<li className="menu-list__item">
 							<a href="#news" className="menu-list__link">Новости</a>
-						</li>						
+						</li>
 					</ul>
 				</nav>
 

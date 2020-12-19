@@ -9,3 +9,7 @@
 .card_type_small:nth-child(3n) {
   margin-right: 0;
 }
+
+.card_type_small:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}

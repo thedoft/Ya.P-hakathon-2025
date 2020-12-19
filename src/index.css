@@ -1,4 +1,5 @@
 @import './fonts/Roboto/roboto.css';
+@import './fonts/Bebas-Neue/bebas-neue.css';
 
 @import './blocks/app/app.css';
 
@@ -40,6 +41,7 @@
 @import './blocks/section/__link/section__link.css';
 @import './blocks/section/__list/section__list.css';
 @import './blocks/section/__list/section__list_home.css';
+@import './blocks/section/__list/section__list_info.css';
 @import './blocks/section/__button/section__button.css';
 @import './blocks/section/__button/section__button_home.css';
 
@@ -63,8 +65,9 @@
 @import './blocks/card/__date/card__date.css';
 @import './blocks/card/__address/card__address.css';
 
-@import './blocks/info-list/info-list.css';
-
+@import './blocks/info-item/info-item.css';
+@import './blocks/info-item/__num/info-item__num.css';
+@import './blocks/info-item/__text/info-item__text.css';
 
 @import './blocks/form/form.css';
 @import './blocks/form/__input/form__input.css';
