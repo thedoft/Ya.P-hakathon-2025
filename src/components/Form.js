@@ -18,7 +18,7 @@ export default function Form() {
       ...provided,
       zIndex: 2
     }),
-    container: (provided) => ({
+    container: (provided, state) => ({
       ...provided,
       width: '100%',
       marginBottom: 36,
