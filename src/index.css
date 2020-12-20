@@ -7,6 +7,10 @@
 @import './blocks/scrollbar/__item/scrollbar__item.css';
 @import './blocks/scrollbar/__item/scrollbar__item_current.css';
 
+@import './blocks/side-nav/side-nav.css';
+@import './blocks/side-nav/__item/side-nav__item.css';
+@import './blocks/side-nav/__link/side-nav__link.css';
+
 @import './blocks/header/header.css';
 @import './blocks/header/__wraper/header__wraper.css';
 @import './blocks/logo/logo.css';

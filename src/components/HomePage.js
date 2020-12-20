@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import CardHome from './CardHome';
 import CardSmall from './CardSmall';
@@ -38,6 +39,18 @@ export default function Main() {
 
         <div className="section__background"></div>
         <Scrollbar />
+
+        <ul className="side-nav">
+          <li className="side-nav__item">
+            <NavLink to="/social" className="side-nav__link">Соцсети</NavLink>
+          </li>
+          <li className="side-nav__item">
+            <NavLink to="/faq" className="side-nav__link">Частые вопросы</NavLink>
+          </li>
+          <li className="side-nav__item">
+            <NavLink to="/support" className="side-nav__link">Поддержка</NavLink>
+          </li>
+        </ul>
       </section>
 
       <section className="section" id="news">
