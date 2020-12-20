@@ -1,8 +1,5 @@
 .section_home {
-  background-color: #DCD9D9;
-  background-image: url(../../images/image37.png);
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #dcd9d9;
   padding-top: 0;
   height: 924px;
   clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);

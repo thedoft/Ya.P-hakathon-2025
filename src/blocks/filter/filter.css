@@ -1,0 +1,11 @@
+.filter {
+  background: url(../../images/eagle.svg);
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 743px;
+  height: 814px;
+  /* opacity: .9; */
+  /* backdrop-filter: blur(4px); */
+}

@@ -34,6 +34,8 @@ export default function Main() {
         <a href="#form" className="section__link section__link_home">
           <Button type="button" class="section__button section__button_home" text="Создать обращение" />
         </a>
+
+        <div className="filter"></div>
       </section>
 
       <section className="section" id="news">
