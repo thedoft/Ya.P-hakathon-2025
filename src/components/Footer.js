@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 import copy from '../images/copy.svg';
 
 export default function Footer() {
@@ -17,22 +19,22 @@ export default function Footer() {
         </div>
         <ul className="menu-list">
           <li className="menu-list__item">
-            <a href="/" className="menu-list__link">Главная</a>
+            <NavLink to="/" className="menu-list__link">Главная</NavLink>
           </li>
           <li className="menu-list__item">
-            <a href="##" className="menu-list__link">Обращения</a>
+            <NavLink to="/ask" className="menu-list__link">Обращения</NavLink>
           </li>
           <li className="menu-list__item">
-            <a href="###" className="menu-list__link">Результаты</a>
+            <NavLink to="/results" className="menu-list__link">Результаты</NavLink>
           </li>
           <li className="menu-list__item">
-            <a href="####" className="menu-list__link">Поддержка</a>
+            <NavLink to="/support" className="menu-list__link">Поддержка</NavLink>
           </li>
           <li className="menu-list__item">
-            <a href="#####" className="menu-list__link">Частые вопросы</a>
+            <NavLink to="/faq" className="menu-list__link">Частые вопросы</NavLink>
           </li>
           <li className="menu-list__item">
-            <a href="######" className="menu-list__link">Соцсети</a>
+            <NavLink to="/social" className="menu-list__link">Соцсети</NavLink>
           </li>
         </ul>
       </div>
