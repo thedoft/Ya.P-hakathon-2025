@@ -18,7 +18,7 @@ export default function Form() {
       ...provided,
       zIndex: 2
     }),
-    container: (provided) => ({
+    container: (provided, state) => ({
       ...provided,
       width: '100%',
       marginBottom: 36,
@@ -90,7 +90,7 @@ export default function Form() {
         <label className="form__label form__label_type_radio" htmlFor="people">Людям</label>
       </div>
 
-      <Button type="submit" class="form__submit-button" text="Создать обращение" onClick={() => {}} />
+      <Button type="submit" class="form__submit-button" text="Создать обращение" />
     </form>
   )
 }

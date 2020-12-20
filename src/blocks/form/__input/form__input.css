@@ -5,9 +5,9 @@
   box-sizing: border-box;
   margin: 0 0 36px;
   opacity: .6;
-  border: none;
+  border: #c4c4c4 1px solid;
   border-radius: 15px;
-  padding: 19px 24px;
+  padding: 18px 24px;
 }
 
 .form__input::placeholder {
@@ -16,4 +16,10 @@
   font-size: 16px;
   line-height: 19px;
   opacity: .4;
+}
+
+.form__input:focus {
+  outline: none;
+  border: #2684ff 1px solid;
+  box-shadow: #2684ff 0 0 0 1px;
 }

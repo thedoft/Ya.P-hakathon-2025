@@ -1,4 +1,11 @@
 .form__file-button {
   position: relative;
   margin: 0 28px 0 0;
+  width: 163px;
+  height: 36px;
+  border-radius: 30px;
+}
+
+.form__file-button:hover {
+  box-shadow: black 0 0 3px;
 }
