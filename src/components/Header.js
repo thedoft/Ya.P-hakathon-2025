@@ -1,6 +1,8 @@
 import React from 'react';
 import Select from 'react-select';
 
+import Button from './Button';
+
 export default function Header() {
 
 	const options =[
@@ -75,7 +77,7 @@ export default function Header() {
 				</nav>
 
 				<div className="header__sign-wrapper">
-					<button type="button" className="header__sign-button" onClick={handleRegistration}>Войти</button>
+          <Button type="button" class="header__sign-button" onClick={handleRegistration} text="Войти" />
 					<a href="####" className="header__sign-link">Зарегистрироваться</a>
 				</div>
 			</div>

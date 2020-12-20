@@ -32,7 +32,7 @@ export default function Main() {
         </ul>
 
         <a href="#form" className="section__link section__link_home">
-          <Button type="button" class="section__button section__button_home" text="Создать обращение" onClick={() => {}} />
+          <Button type="button" class="section__button section__button_home" text="Создать обращение" />
         </a>
       </section>
 

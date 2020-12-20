@@ -2,7 +2,10 @@ import React from 'react';
 
 export default function Button(props) {
   function handleButtonClick() {
-    props.onClick();
+    if (props.onClick) {
+      props.onClick();
+    }
+    return;
   }
 
   return (

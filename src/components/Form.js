@@ -90,7 +90,7 @@ export default function Form() {
         <label className="form__label form__label_type_radio" htmlFor="people">Людям</label>
       </div>
 
-      <Button type="submit" class="form__submit-button" text="Создать обращение" onClick={() => {}} />
+      <Button type="submit" class="form__submit-button" text="Создать обращение" />
     </form>
   )
 }
