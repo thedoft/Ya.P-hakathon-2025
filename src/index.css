@@ -18,10 +18,6 @@
 
 @import './blocks/main/main.css';
 
-@import './blocks/button/button.css';
-@import './blocks/button/_type/button_type_close.css';
-
-
 @import './blocks/popup/popup.css';
 @import './blocks/popup/__block/popup__block.css';
 @import './blocks/popup/_hidden/popup_hidden.css';
@@ -70,6 +66,7 @@
 @import './blocks/info-item/__text/info-item__text.css';
 
 @import './blocks/form/form.css';
+@import './blocks/form/__title/form__title.css';
 @import './blocks/form/__input/form__input.css';
 @import './blocks/form/__input/_type/form__input_type_textarea.css';
 @import './blocks/form/__input/_type/form__input_type_radio.css';
@@ -78,6 +75,10 @@
 @import './blocks/form/__label/_type/form__label_type_radio.css';
 @import './blocks/form/__label/_type/form__label_type_file.css';
 @import './blocks/form/__require-accent/form__require-accent.css';
+@import './blocks/form/__buttons/form__buttons.css';
+@import './blocks/form/__button/form__button.css';
+@import './blocks/form/__link/form__link.css';
+@import './blocks/form/_popup/form_popup.css';
 
 @import './blocks/form/__file-container/form__file-container.css';
 @import './blocks/form/__file-button/form__file-button.css';
@@ -85,6 +86,14 @@
 @import './blocks/form/__text/form__text.css';
 @import './blocks/form/__radio-container/form__radio-container.css';
 @import './blocks/form/__submit-button/form__submit-button.css';
+@import './blocks/form/__input/_popup/form__input_popup.css';
+
+@import './blocks/line/line.css';
+@import './blocks/line/__content/line__content.css';
+
+@import './blocks/button/button.css';
+@import './blocks/button/_type/button_type_close.css';
+@import './blocks/button/_gov/button_gov.css';
 
 @import './blocks/footer/footer.css';
 @import './blocks/footer/__wraper/footer__wraper.css';

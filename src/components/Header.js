@@ -41,8 +41,8 @@ export default function Header() {
     })
   }
 
-  function handleRegistration() {
-    document.querySelector('#registration').classList.remove('popup_hidden')
+  function handleLogin() {
+    document.querySelector('#login').classList.remove('popup_hidden')
   }
 
   return (
@@ -77,7 +77,7 @@ export default function Header() {
 				</nav>
 
 				<div className="header__sign-wrapper">
-					<button type="button" className="header__sign-button" onClick={handleRegistration}>Войти</button>
+					<button type="button" className="header__sign-button" onClick={handleLogin}>Войти</button>
 					<a href="####" className="header__sign-link">Зарегистрироваться</a>
 				</div>
 			</div>

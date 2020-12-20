@@ -1,0 +1,8 @@
+.form__buttons{
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	justify-content: space-between;
+	min-width: 356px;
+	margin-top: 28px;
+	align-items: center;
+}
