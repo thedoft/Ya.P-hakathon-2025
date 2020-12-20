@@ -1,0 +1,7 @@
+.button_gov{
+	background: url('../../../images/gov.svg') center 20px no-repeat;
+	width: 164px;
+	height: 54px;
+	border: 1px solid;
+	margin-top: 36px;
+}

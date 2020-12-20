@@ -1,6 +1,5 @@
 .popup__block{
-	max-width: 740px;
-	max-height: 544px;
+	min-width: 685px;
 	border-radius: 30px;
 	background-color: #EFEFEF;
 	position: relative;

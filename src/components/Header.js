@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import Select from 'react-select';
 
 import Button from './Button';
@@ -42,8 +41,8 @@ export default function Header() {
     })
   }
 
-  function handleRegistration() {
-    document.querySelector('#registration').classList.remove('popup_hidden')
+  function handleLogin() {
+    document.querySelector('#login').classList.remove('popup_hidden')
   }
 
   return (
@@ -78,7 +77,7 @@ export default function Header() {
 				</nav>
 
 				<div className="header__sign-wrapper">
-          <Button type="button" class="header__sign-button" onClick={handleRegistration} text="Войти" />
+          <Button type="button" class="header__sign-button" onClick={handleLogin} text="Войти" />
 					<a href="####" className="header__sign-link">Зарегистрироваться</a>
 				</div>
 			</div>
