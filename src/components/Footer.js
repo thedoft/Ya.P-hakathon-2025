@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../images/logo.svg';
 import copy from '../images/copy.svg';
 
 export default function Footer() {
@@ -7,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__wraper">
         <div className="copyright">
-          <img src={logo} alt="#" className="logo logo_small" />
+          <img src="./logo.png" alt="#" className="logo" />
           <div className="copyright__content">
             <img src={copy} alt="#" className="copyright__sympol" />
             <div className="copyright__text-block">

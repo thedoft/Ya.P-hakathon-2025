@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Popup(popup) {
 	/* popup_hidden this`s selector for hidden popup */
-	
+
 	const closePopup = function (){
 		console.log(document.querySelector('#' + popup.id));
 	}

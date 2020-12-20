@@ -1,3 +1,11 @@
 .button{
-	cursor: pointer;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 30px;
+}
+
+.button:hover,
+.button:focus {
+  outline: none;
+  box-shadow: black 0 0 5px;
 }

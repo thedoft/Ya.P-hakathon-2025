@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 
-import logo from '../images/logo.svg';
+import Button from './Button';
 
 export default function Header() {
 
@@ -48,7 +48,7 @@ export default function Header() {
   return (
     <header className="header">
 			<div className="header__wraper">
-				<img src={logo} alt="#" className="logo" />
+				<img src="./logo.png" alt="#" className="logo" />
 				<div className="location">
 					<Select id="title"
 						styles={customStyles}
@@ -77,7 +77,11 @@ export default function Header() {
 				</nav>
 
 				<div className="header__sign-wrapper">
+<<<<<<< HEAD
 					<button type="button" className="header__sign-button" onClick={handleLogin}>Войти</button>
+=======
+          <Button type="button" class="header__sign-button" onClick={handleRegistration} text="Войти" />
+>>>>>>> a9881d6e1c44da0728364fafee73c90111c3f456
 					<a href="####" className="header__sign-link">Зарегистрироваться</a>
 				</div>
 			</div>
