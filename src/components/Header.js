@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Select from 'react-select';
 
 import Button from './Button';
@@ -65,7 +66,7 @@ export default function Header() {
 				<nav className="header__nav">
 					<ul className="menu-list menu-list_logout">
 						<li className="menu-list__item">
-							<a href="/" className="menu-list__link menu-list_current">Главная</a>
+							<NavLink to="/" className="menu-list__link menu-list_current">Главная</NavLink>
 						</li>
 						<li className="menu-list__item">
 							<a href="#ask" className="menu-list__link">Обращения</a>

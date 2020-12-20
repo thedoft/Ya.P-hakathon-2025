@@ -8,7 +8,7 @@ import Forms from './components/Forms';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/yap-hackathon-2025' : '/'}>
       <Header />
       <Main />
       <Footer />
