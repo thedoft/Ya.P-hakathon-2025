@@ -1,5 +1,5 @@
-.filter {
-  background: url(../../images/eagle.svg);
+.section__background {
+  background: url(../../../images/eagle.svg);
   position: absolute;
   top: 40px;
   left: 50%;

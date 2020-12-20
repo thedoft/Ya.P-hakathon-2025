@@ -3,12 +3,6 @@
 
 @import './blocks/app/app.css';
 
-@import './blocks/button/button.css';
-@import './blocks/button/_type/button_type_close.css';
-@import './blocks/button/_gov/button_gov.css';
-
-@import './blocks/filter/filter.css';
-
 @import './blocks/header/header.css';
 @import './blocks/header/__wraper/header__wraper.css';
 @import './blocks/logo/logo.css';
@@ -26,6 +20,10 @@
 
 @import './blocks/button/button.css';
 @import './blocks/button/_type/button_type_close.css';
+@import './blocks/button/_type/button_type_close.css';
+@import './blocks/form/__buttons/form__buttons.css';
+@import './blocks/form/__button/form__button.css';
+@import './blocks/button/_gov/button_gov.css';
 
 @import './blocks/popup/popup.css';
 @import './blocks/popup/__block/popup__block.css';
@@ -51,6 +49,7 @@
 @import './blocks/section/__list/section__list_info.css';
 @import './blocks/section/__button/section__button.css';
 @import './blocks/section/__button/section__button_home.css';
+@import './blocks/section/__background/section__background.css';
 
 @import './blocks/card/card.css';
 @import './blocks/card/_type/card_type_home.css';
@@ -86,8 +85,6 @@
 @import './blocks/form/__label/_type/form__label_type_radio.css';
 @import './blocks/form/__label/_type/form__label_type_file.css';
 @import './blocks/form/__require-accent/form__require-accent.css';
-@import './blocks/form/__buttons/form__buttons.css';
-@import './blocks/form/__button/form__button.css';
 @import './blocks/form/__link/form__link.css';
 @import './blocks/form/_popup/form_popup.css';
 

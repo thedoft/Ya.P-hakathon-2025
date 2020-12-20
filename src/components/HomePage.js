@@ -35,7 +35,7 @@ export default function Main() {
           <Button type="button" class="section__button section__button_home" text="Создать обращение" />
         </a>
 
-        <div className="filter"></div>
+        <div className="section__background"></div>
       </section>
 
       <section className="section" id="news">
