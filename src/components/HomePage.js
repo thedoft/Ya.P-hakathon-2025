@@ -6,6 +6,7 @@ import CardBig from './CardBig';
 import InfoItem from './InfoItem';
 import Form from './Form';
 import Button from './Button';
+import Scrollbar from './Scrollbar';
 
 import { cardsHome } from '../data/cardsHome';
 import { cardsSmall } from '../data/cardsSmall';
@@ -36,6 +37,7 @@ export default function Main() {
         </a>
 
         <div className="section__background"></div>
+        <Scrollbar />
       </section>
 
       <section className="section" id="news">
