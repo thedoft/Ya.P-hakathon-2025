@@ -69,10 +69,10 @@ export default function Header() {
 							<NavLink to="/" className="menu-list__link menu-list_current">Главная</NavLink>
 						</li>
 						<li className="menu-list__item">
-							<a href="#ask" className="menu-list__link">Обращения</a>
+							<NavLink to="/ask" className="menu-list__link">Обращения</NavLink>
 						</li>
 						<li className="menu-list__item">
-							<a href="#news" className="menu-list__link">Новости</a>
+							<NavLink to="/news" className="menu-list__link">Новости</NavLink>
 						</li>
 					</ul>
 				</nav>

@@ -25,7 +25,7 @@ export default function Footer() {
             <NavLink to="/ask" className="menu-list__link">Обращения</NavLink>
           </li>
           <li className="menu-list__item">
-            <NavLink to="/results" className="menu-list__link">Результаты</NavLink>
+            <NavLink to="/news" className="menu-list__link">Новости</NavLink>
           </li>
           <li className="menu-list__item">
             <NavLink to="/support" className="menu-list__link">Поддержка</NavLink>

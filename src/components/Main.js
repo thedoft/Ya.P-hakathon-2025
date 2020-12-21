@@ -22,8 +22,8 @@ export default function Main() {
         <Route path="/support">
           <InDevPage title="Поддержка" />
         </Route>
-        <Route path="/results">
-          <InDevPage title="Результаты" />
+        <Route path="/news">
+          <InDevPage title="Новости" />
         </Route>
         <Route path="/ask">
           <InDevPage title="Обращения" />
