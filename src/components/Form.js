@@ -54,7 +54,7 @@ export default function Form() {
 
   return (
     <form className="form" action="#" onSubmit={handleSubmit}>
-      <label className="form__label" htmlFor="address">Адрес обращения<span className="form__require-accent">*</span></label>
+      <label className="form__label" htmlFor="address">Адрес, где необходимо реализовать обращение<span className="form__require-accent">*</span></label>
       <input id="#address" className="form__input form__input_type_text" placeholder="Введите адрес" required />
 
       <label className="form__label" htmlFor="title">Тема обращения<span className="form__require-accent">*</span></label>

@@ -14,12 +14,7 @@ import { cardsSmall } from '../data/cardsSmall';
 import { cardsBig } from '../data/cardsBig';
 import { infoItems } from '../data/infoItems';
 
-export default function Main() {
-
-  function handleSectionButtonClick() {
-    alert('Скоро покажем больше :)')
-  }
-
+export default function HomePage() {
   return (
     <>
       <section className="section section_home">
@@ -54,7 +49,9 @@ export default function Main() {
       </section>
 
       <section className="section" id="news">
+      <NavLink to="/news" style={{ 'text-decoration': 'none' }}>
         <h2 className="section__title">Новости</h2>
+      </NavLink>
 
         <ul className="section__list">
           {cardsSmall.map((card, index) => (
@@ -62,11 +59,15 @@ export default function Main() {
           ))}
         </ul>
 
-        <Button type="button" class="section__button" onClick={handleSectionButtonClick} text="Больше новостей" />
+        <NavLink to="/news">
+          <Button type="button" class="section__button" text="Больше новостей" />
+        </NavLink>
       </section>
 
       <section className="section" id="ask">
+      <NavLink to="/initiatives" style={{ 'text-decoration': 'none' }}>
         <h2 className="section__title">Недавние обращения</h2>
+      </NavLink>
 
         <ul className="section__list section__list_info">
           {infoItems.map((item, index) => (
@@ -80,13 +81,15 @@ export default function Main() {
           ))}
         </ul>
 
-        <Button type="button" class="section__button" onClick={handleSectionButtonClick} text="Больше обращений" />
+        <NavLink to="/initiatives">
+          <Button type="button" class="section__button" text="Больше обращений" />
+        </NavLink>
       </section>
 
       <section className="section" id="form">
         <h2 className="section__title section__title_form">Создайте обращение</h2>
         <p className="section__subtitle">
-          Поделитесь идеями развития вашего района или расскажите о его проблемах — ни одно обращение не останется без внимания. За прогрессом рассмотрения каждого обращения можете наблюдать в разделе <a href="##" className="section__link">Обращения</a>
+          Поделитесь идеями развития вашего района или расскажите о его проблемах — ни одно обращение не останется без внимания. За прогрессом рассмотрения каждого обращения можете наблюдать в разделе <NavLink to="/initiatives" className="section__link">Обращения</NavLink>
         </p>
 
         <Form />

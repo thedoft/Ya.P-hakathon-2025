@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from './HomePage';
+import InitiativesPage from './InitiativesPage';
 import InDevPage from './InDevPage';
 import NotFoundPage from './NotFoundPage';
 
@@ -22,11 +23,11 @@ export default function Main() {
         <Route path="/support">
           <InDevPage title="Поддержка" />
         </Route>
-        <Route path="/results">
-          <InDevPage title="Результаты" />
+        <Route path="/news">
+          <InDevPage title="Новости" />
         </Route>
-        <Route path="/ask">
-          <InDevPage title="Обращения" />
+        <Route path="/initiatives">
+          <InitiativesPage />
         </Route>
         <Route path="*">
           <NotFoundPage />

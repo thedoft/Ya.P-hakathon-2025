@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import Logo from './Logo';
+
 import copy from '../images/copy.svg';
 
 export default function Footer() {
@@ -8,7 +10,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__wraper">
         <div className="copyright">
-          <img src="./logo.png" alt="#" className="logo" />
+          <Logo />
           <div className="copyright__content">
             <img src={copy} alt="#" className="copyright__sympol" />
             <div className="copyright__text-block">
@@ -22,10 +24,10 @@ export default function Footer() {
             <NavLink to="/" className="menu-list__link">Главная</NavLink>
           </li>
           <li className="menu-list__item">
-            <NavLink to="/ask" className="menu-list__link">Обращения</NavLink>
+            <NavLink to="/initiatives" className="menu-list__link">Обращения</NavLink>
           </li>
           <li className="menu-list__item">
-            <NavLink to="/results" className="menu-list__link">Результаты</NavLink>
+            <NavLink to="/news" className="menu-list__link">Новости</NavLink>
           </li>
           <li className="menu-list__item">
             <NavLink to="/support" className="menu-list__link">Поддержка</NavLink>

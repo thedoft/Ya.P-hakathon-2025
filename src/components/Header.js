@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Select from 'react-select';
 
+import Logo from './Logo';
 import Button from './Button';
 
 export default function Header() {
@@ -49,7 +50,7 @@ export default function Header() {
   return (
     <header className="header">
 			<div className="header__wraper">
-				<img src="./logo.png" alt="#" className="logo" />
+				<Logo />
 				<div className="location">
 					<Select id="title"
 						styles={customStyles}
@@ -66,13 +67,13 @@ export default function Header() {
 				<nav className="header__nav">
 					<ul className="menu-list menu-list_logout">
 						<li className="menu-list__item">
-							<NavLink to="/" className="menu-list__link menu-list_current">Главная</NavLink>
+							<NavLink exact to="/" className="menu-list__link" activeClassName="menu-list_current">Главная</NavLink>
 						</li>
 						<li className="menu-list__item">
-							<a href="#ask" className="menu-list__link">Обращения</a>
+							<NavLink to="/initiatives" className="menu-list__link" activeClassName="menu-list_current">Обращения</NavLink>
 						</li>
 						<li className="menu-list__item">
-							<a href="#news" className="menu-list__link">Новости</a>
+							<NavLink to="/news" className="menu-list__link" activeClassName="menu-list_current">Новости</NavLink>
 						</li>
 					</ul>
 				</nav>

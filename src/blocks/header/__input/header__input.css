@@ -1,11 +1,13 @@
 .header__input{
-	padding: 14px 40px 14px 12px;
+	padding: 14px 44px 14px 12px;
 	border-radius: 30px;
-	border: 0;
-	background-color: #DDDCDC;
+	border: #dddcdc 1px solid;
+	background-color: #dddcdc;
 	min-width: 212px;
 }
 
 .header__input:focus{
-	border-radius: 30px;
+  outline: none;
+  border: #2684ff 1px solid;
+  box-shadow: #2684ff 0 0 0 1px;
 }

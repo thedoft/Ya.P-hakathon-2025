@@ -28,7 +28,6 @@
 
 @import './blocks/button/button.css';
 @import './blocks/button/_type/button_type_close.css';
-@import './blocks/button/_type/button_type_close.css';
 @import './blocks/form/__buttons/form__buttons.css';
 @import './blocks/form/__button/form__button.css';
 @import './blocks/button/_gov/button_gov.css';
