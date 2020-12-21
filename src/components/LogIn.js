@@ -7,9 +7,9 @@ export default function LogIn() {
 	}
 	
 	return (
-		<div className="">
+		<div className="login-form">
 			<form className="form form_popup" action="#" onSubmit={handleSubmit}>
-				<h2 class="form__title">Вход</h2>
+				<h2 className="form__title">Вход</h2>
 				<label className="form__label" htmlFor="login">Логин<span className="form__require-accent">*</span></label>
 				<input id="#login" className="form__input form__input_type_text form__input_popup" placeholder="Логином служит адрес вашей эл. почты" required />
 

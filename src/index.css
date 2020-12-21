@@ -2,6 +2,7 @@
 @import './fonts/Bebas-Neue/bebas-neue.css';
 
 @import './blocks/app/app.css';
+@import './blocks/button/button.css';
 
 @import './blocks/header/header.css';
 @import './blocks/header/__wraper/header__wraper.css';
@@ -20,7 +21,7 @@
 
 @import './blocks/popup/popup.css';
 @import './blocks/popup/__block/popup__block.css';
-@import './blocks/popup/_hidden/popup_hidden.css';
+@import './blocks/popup/_visible/popup_visible.css';
 
 @import './blocks/menu-list/menu__list.css';
 @import './blocks/menu-list/__item/menu__item.css';
@@ -91,7 +92,6 @@
 @import './blocks/line/line.css';
 @import './blocks/line/__content/line__content.css';
 
-@import './blocks/button/button.css';
 @import './blocks/button/_type/button_type_close.css';
 @import './blocks/button/_gov/button_gov.css';
 

@@ -3,7 +3,7 @@ import Select from 'react-select';
 
 import Button from './Button';
 
-export default function Header() {
+export default function Header(props) {
 
 	const options =[
 		{ value : 'Москва', label : 'Москва' },
@@ -41,10 +41,6 @@ export default function Header() {
     })
   }
 
-  function handleLogin() {
-    document.querySelector('#login').classList.remove('popup_hidden')
-  }
-
   return (
     <header className="header">
 			<div className="header__wraper">
@@ -77,7 +73,7 @@ export default function Header() {
 				</nav>
 
 				<div className="header__sign-wrapper">
-          <Button type="button" class="header__sign-button" onClick={handleLogin} text="Войти" />
+          <Button type="button" class="header__sign-button" onClick={props.isOpenPopupLogin} text="Войти" />
 					<a href="####" className="header__sign-link">Зарегистрироваться</a>
 				</div>
 			</div>
