@@ -10,8 +10,8 @@ import Button from './Button';
 import Scrollbar from './Scrollbar';
 
 import { cardsHome } from '../data/cardsHome';
-import { cardsSmall } from '../data/cardsSmall';
-import { cardsBig } from '../data/cardsBig';
+import { news } from '../data/news';
+import { initiatives } from '../data/initiatives';
 import { infoItems } from '../data/infoItems';
 
 export default function HomePage() {
@@ -54,7 +54,7 @@ export default function HomePage() {
       </NavLink>
 
         <ul className="section__list">
-          {cardsSmall.map((card, index) => (
+          {news.map((card, index) => (
             <CardSmall card={card} key={index} />
           ))}
         </ul>
@@ -76,7 +76,7 @@ export default function HomePage() {
         </ul>
 
         <ul className="section__list">
-          {cardsBig.map((card, index) => (
+          {initiatives.map((card, index) => (
             <CardBig card={card} key={index} />
           ))}
         </ul>

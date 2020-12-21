@@ -1,6 +1,6 @@
 import cardImgBig from '../images/card-img-big.png';
 
-export const cardsBig = [
+export const initiatives = [
   {
     img: cardImgBig,
     altText: '#',

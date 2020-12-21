@@ -1,6 +1,6 @@
 import cardImg from '../images/card-img.png';
 
-export const cardsSmall = [
+export const news = [
   {
     img: cardImg,
     altText: '#',
