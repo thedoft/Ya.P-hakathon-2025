@@ -17,13 +17,19 @@ export default function Header(props) {
     }),
     control: (provided) => ({
       ...provided,
-      backgroundColor: '#c4c4c4',
+      backgroundColor: '#7F9E81',
       opacity: .7,
 			maxHeight: 30,
 			border : 0,
 			color: '#000',
 			width: 138
 		}),
+
+		indicatorSeparator: (provided) => ({
+			...provided,
+			backgroundColor: '#7F9E81'
+		}),
+
 		singleValue: (provided) => ({
 			...provided,
 			color : '#000',
@@ -31,6 +37,7 @@ export default function Header(props) {
 			whiteSpace : 'nowrap',
 			overflow : 'hidden'
 		}),
+
     placeholder: (provided) => ({
       ...provided,
 			opacity: .4,

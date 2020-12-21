@@ -23,7 +23,7 @@ export default function Footer() {
             <a href="##" className="menu-list__link">Обращения</a>
           </li>
           <li className="menu-list__item">
-            <a href="###" className="menu-list__link">Результаты</a>
+            <a href="###" className="menu-list__link">Новости</a>
           </li>
           <li className="menu-list__item">
             <a href="####" className="menu-list__link">Поддержка</a>
