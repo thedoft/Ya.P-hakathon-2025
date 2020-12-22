@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function CardSmall(props) {
-  const card = props.card;
+  const card = props.item;
 
   return (
     <li className="card card_type_small">

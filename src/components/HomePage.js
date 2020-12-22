@@ -8,6 +8,7 @@ import InfoItem from './InfoItem';
 import Form from './Form';
 import Button from './Button';
 import Scrollbar from './Scrollbar';
+import SectionList from './SectionList';
 
 import { cardsHome } from '../data/cardsHome';
 import { news } from '../data/news';
@@ -15,6 +16,15 @@ import { initiatives } from '../data/initiatives';
 import { infoItems } from '../data/infoItems';
 
 export default function HomePage() {
+  function handleFormSubmit(item) {
+    initiatives.push(item);
+    alert('Ваше обращение отправлено!');
+  }
+
+  function showInfinitedCountItems(items, count) {
+    return items.slice(count).reverse();
+  }
+
   return (
     <>
       <section className="section section_home">
@@ -22,11 +32,7 @@ export default function HomePage() {
           Гражданская поэтическая инициатива — платформа городских улучшений, где каждый будет услышан
         </h1>
 
-        <ul className="section__list section__list_home">
-          {cardsHome.map((card, index) => (
-            <CardHome card={card} key={index} />
-          ))}
-        </ul>
+        <SectionList class="section__list_home" items={cardsHome} template={CardHome} />
 
         <a href="#form" className="section__link section__link_home">
           <Button type="button" class="section__button section__button_home" text="Создать обращение" />
@@ -49,15 +55,11 @@ export default function HomePage() {
       </section>
 
       <section className="section" id="news">
-      <NavLink to="/news" style={{ 'text-decoration': 'none' }}>
-        <h2 className="section__title">Новости</h2>
-      </NavLink>
+        <NavLink to="/news" style={{ 'textDecoration': 'none' }}>
+          <h2 className="section__title">Новости</h2>
+        </NavLink>
 
-        <ul className="section__list">
-          {news.map((card, index) => (
-            <CardSmall card={card} key={index} />
-          ))}
-        </ul>
+        <SectionList items={news} template={CardSmall} middleware={showInfinitedCountItems} count="-5" />
 
         <NavLink to="/news">
           <Button type="button" class="section__button" text="Больше новостей" />
@@ -65,21 +67,13 @@ export default function HomePage() {
       </section>
 
       <section className="section" id="ask">
-      <NavLink to="/initiatives" style={{ 'text-decoration': 'none' }}>
+      <NavLink to="/initiatives" style={{ 'textDecoration': 'none' }}>
         <h2 className="section__title">Недавние обращения</h2>
       </NavLink>
 
-        <ul className="section__list section__list_info">
-          {infoItems.map((item, index) => (
-            <InfoItem item={item} key={index} />
-          ))}
-        </ul>
+        <SectionList class="section__list_info" items={infoItems} template={InfoItem} />
 
-        <ul className="section__list">
-          {initiatives.map((card, index) => (
-            <CardBig card={card} key={index} />
-          ))}
-        </ul>
+        <SectionList items={initiatives} template={CardBig} middleware={showInfinitedCountItems} count="-3" />
 
         <NavLink to="/initiatives">
           <Button type="button" class="section__button" text="Больше обращений" />
@@ -92,7 +86,7 @@ export default function HomePage() {
           Поделитесь идеями развития вашего района или расскажите о его проблемах — ни одно обращение не останется без внимания. За прогрессом рассмотрения каждого обращения можете наблюдать в разделе <NavLink to="/initiatives" className="section__link">Обращения</NavLink>
         </p>
 
-        <Form />
+        <Form onSubmit={handleFormSubmit} />
 
       </section>
     </>
