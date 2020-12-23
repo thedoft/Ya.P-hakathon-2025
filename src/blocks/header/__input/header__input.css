@@ -1,0 +1,14 @@
+.header__input{
+	padding: 14px 44px 14px 12px;
+	border-radius: 30px;
+	border: 0;
+	background-color:	#b4cab5;
+	border: #b4cab5 1px solid;
+	min-width: 212px;
+}
+
+.header__input:focus{
+  outline: none;
+  border: #2684ff 1px solid;
+  box-shadow: #2684ff 0 0 0 1px;
+}

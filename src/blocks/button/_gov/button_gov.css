@@ -1,0 +1,6 @@
+.button_gov{
+  background-color: transparent;
+	background: url('../../../images/gov.svg') center 20px no-repeat;
+  margin-top: 36px;
+  border: black 1px solid;
+}

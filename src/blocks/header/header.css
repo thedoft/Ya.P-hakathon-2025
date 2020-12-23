@@ -1,0 +1,8 @@
+.header {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100px;
+  padding: 0 158px;
+	box-sizing: border-box;
+	background-color: #7F9E81;
+}

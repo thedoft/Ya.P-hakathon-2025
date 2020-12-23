@@ -1,0 +1,14 @@
+.card {
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 356px;
+  margin: 0 28px 0 0;
+}
+
+.card:last-of-type {
+  margin: 0;
+}
