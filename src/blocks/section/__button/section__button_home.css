@@ -4,6 +4,7 @@
   border: none;
   font-size: 32px;
   line-height: 37px;
-  background: #9b9b9b;
+  background:#FFEBDA;
   border-radius: 45px;
+  box-shadow: 0px 8px 12px rgba(80, 80, 80, 0.5);
 }
