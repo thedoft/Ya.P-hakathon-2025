@@ -1,0 +1,11 @@
+.header__sign-button{
+  width: 164px;
+  height: 40px;
+	font-size: 16px;
+	line-height: 19px;
+	color: #FFEBDA;
+	border-radius: 30px;
+	background-color: #7F9E81;
+	border: 2px solid #FFEBDA;
+	cursor: pointer;
+}
