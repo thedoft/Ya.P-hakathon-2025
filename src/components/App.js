@@ -6,7 +6,6 @@ import Main from './Main';
 import Footer from './Footer';
 import Login from './Login';
 
-
 function App() {
 	const [isLoginPopupOpen, setIsLoginPopupOpen] = React.useState(false);
 

@@ -1,15 +1,24 @@
 import React from 'react';
-import Select from 'react-select';
+import Select, { components } from 'react-select';
 
 import Button from './Button';
 
 import img from '../images/card-img-big.png';
+import caretDown from '../images/caretDown.svg';
 
 export default function Form(props) {
   const selectOptions = [
     { value : 'Название 1', label : 'Название 1' },
     { value : 'Название 2', label : 'Название 2' }
   ];
+
+  const DropdownIndicator = (props) => {
+    return (
+      <components.DropdownIndicator {...props}>
+        <img src={caretDown} alt="caretDown" />
+      </components.DropdownIndicator>
+    )
+  }
 
   const customStyles = {
     singleValue: (provided) => ({
@@ -23,16 +32,16 @@ export default function Form(props) {
     container: (provided) => ({
       ...provided,
       width: '100%',
-      marginBottom: 36,
+      marginBottom: 9,
     }),
     control: (provided, state) => ({
       ...provided,
       backgroundColor: '#c4c4c4',
-      opacity: .6,
       minHeight: 56,
       borderRadius: 15,
       boxShadow: state.isFocused ? '#7F9E81 0 0 0 1px' : 'none',
       borderColor: state.isFocused ? '#7F9E81' : '#c4c4c4',
+      opacity: .6,
     }),
     placeholder: (provided) => ({
       ...provided,
@@ -41,13 +50,18 @@ export default function Form(props) {
     }),
     valueContainer: (provided) => ({
       ...provided,
-      paddingLeft: 24
-    })
+      paddingLeft: 24,
+    }),
+		indicatorContainer: (provided) => ({
+			...provided,
+			backgroundColor: '#7F9E81'
+    }),
   }
 
   const [checked, setChecked] = React.useState('gov');
   const [address, setAddress] = React.useState('');
   const [selectValue, setSelectValue] = React.useState('');
+  const [title, setTitle] = React.useState('');
   const [text, setText] = React.useState('');
 
   function handleRadioChange(evt) {
@@ -64,6 +78,10 @@ export default function Form(props) {
 
   function handleTextChange(evt) {
     setText(evt.target.value);
+  }
+
+  function handleTitleChange(evt) {
+    setTitle(evt.target.value);
   }
 
   function handleSubmit(evt) {
@@ -85,17 +103,21 @@ export default function Form(props) {
 
   return (
     <form className="form" action="#" onSubmit={handleSubmit} id="form">
-      <label className="form__label" htmlFor="address">Адрес, где необходимо реализовать обращение<span className="form__require-accent">*</span></label>
+      <label className="form__label" htmlFor="address">Адрес, где необходимо провести работу по обращению<span className="form__require-accent">*</span></label>
       <input value={address} onChange={handleAddressChange} id="#address" className="form__input form__input_type_text" placeholder="Введите адрес" required />
 
       <label className="form__label" htmlFor="title">Тема обращения<span className="form__require-accent">*</span></label>
       <Select id="title"
+        components={{ DropdownIndicator }}
         styles={customStyles}
         options={selectOptions}
         placeholder='Выберите тип обращения'
         value={selectValue}
         onChange={HandleSelectChange}
         required />
+
+      <label className="form__label" htmlFor="title">Название обращение<span className="form__require-accent">*</span></label>
+      <input value={title} onChange={handleTitleChange} id="#title" className="form__input form__input_type_text" placeholder="Введите название обращения" required />
 
       <label className="form__label" htmlFor="text">Текст обращения<span className="form__require-accent">*</span></label>
       <textarea id="text" className="form__input form__input_type_textarea"

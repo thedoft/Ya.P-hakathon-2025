@@ -5,20 +5,11 @@ export default function Popup(props) {
 
 	const handleClose = () => {
 		props.onClose();
-	}
+  }
 
   const handleLayoutClick = () => {
     props.onLayout(popup.current);
   }
-
-	React.useEffect(() => {
-    props.isOpen && document.addEventListener('keyup', props.onEscape);
-
-    return () => {
-      document.removeEventListener('keyup', props.onEscape);
-    };
-  }, [props]);
-
 
 	return (
 		<div ref={popup} className={`popup ${props.isOpen ? 'popup_visible' : ''}`} onClick={handleLayoutClick} >
