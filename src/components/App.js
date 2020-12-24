@@ -1,46 +1,44 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import Forms from './components/Forms';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+import Login from './Login';
 
 
 function App() {
-	const [isOpenPopupLogin, setIsOpenPopupLogin] = React.useState(false);
-	const [isOpenPopupRegistration, setIsOpenPopupRegistration] = React.useState(false);
-	
-	const openPopupMeth = () => {
-		setIsOpenPopupLogin(true);
+	const [isLoginPopupOpen, setIsLoginPopupOpen] = React.useState(false);
+
+	const openLoginPopup = () => {
+		setIsLoginPopupOpen(true);
 	}
 
 	const closeAllPopups = () => {
-		setIsOpenPopupLogin(false);
-		setIsOpenPopupRegistration(false);
+		setIsLoginPopupOpen(false);
 	}
 
 	function handleEscapeClose(evt) {
     evt.key === 'Escape' && closeAllPopups();
 	}
-	
+
 	function handleLayoutClick(popup) {
     popup.addEventListener('mousedown', evt => {
       evt.target === evt.currentTarget && closeAllPopups();
     })
   }
-	
+
   return (
     <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/yap-hackathon-2025' : '/'}>
-     <Header 
-				isOpenPopupLogin = {openPopupMeth}
-				isOpenLogin = {isOpenPopupLogin}
+      <Header
+        onOpen={openLoginPopup}
+        isOpen={isLoginPopupOpen}
 			/>
       <Main />
       <Footer />
-			<Forms 
-				isClosePopupLogin = {closeAllPopups}
-				isOpenLogin = {isOpenPopupLogin}
+			<Login
+        isOpen={isLoginPopupOpen}
+				onClose={closeAllPopups}
 				onLayout={handleLayoutClick}
 				onEscape={handleEscapeClose}
 			/>

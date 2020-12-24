@@ -2,6 +2,7 @@ import React from 'react';
 import Select from 'react-select';
 
 import Button from './Button';
+
 import img from '../images/card-img-big.png';
 
 export default function Form(props) {
@@ -24,12 +25,14 @@ export default function Form(props) {
       width: '100%',
       marginBottom: 36,
     }),
-    control: (provided) => ({
+    control: (provided, state) => ({
       ...provided,
       backgroundColor: '#c4c4c4',
       opacity: .6,
       minHeight: 56,
-      borderRadius: 15
+      borderRadius: 15,
+      boxShadow: state.isFocused ? '#7F9E81 0 0 0 1px' : 'none',
+      borderColor: state.isFocused ? '#7F9E81' : '#c4c4c4',
     }),
     placeholder: (provided) => ({
       ...provided,
@@ -81,7 +84,7 @@ export default function Form(props) {
   }
 
   return (
-    <form className="form" action="#" onSubmit={handleSubmit}>
+    <form className="form" action="#" onSubmit={handleSubmit} id="form">
       <label className="form__label" htmlFor="address">Адрес, где необходимо реализовать обращение<span className="form__require-accent">*</span></label>
       <input value={address} onChange={handleAddressChange} id="#address" className="form__input form__input_type_text" placeholder="Введите адрес" required />
 

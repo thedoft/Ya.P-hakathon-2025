@@ -9,6 +9,4 @@
 
 .header__input:focus{
   outline: none;
-  border: #2684ff 1px solid;
-  box-shadow: #2684ff 0 0 0 1px;
 }

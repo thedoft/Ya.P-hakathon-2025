@@ -1,11 +1,11 @@
 .form__input {
   width: 100%;
   min-height: 56px;
-  background: #7F9E81;
+  background: #c4c4c4;
   box-sizing: border-box;
   margin: 0 0 36px;
   opacity: .6;
-  border: #7F9E81 1px solid;
+  border: #c4c4c4 1px solid;
   border-radius: 15px;
   padding: 18px 24px;
 }

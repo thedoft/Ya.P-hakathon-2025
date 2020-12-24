@@ -6,7 +6,6 @@ import Logo from './Logo';
 import Button from './Button';
 
 export default function Header(props) {
-
 	const options =[
 		{ value : 'Москва', label : 'Москва' },
 		{ value : 'Санкт-Петербург', label : 'Санкт-Петербург'}
@@ -17,21 +16,22 @@ export default function Header(props) {
       ...provided,
       minWidth: 150
     }),
-    control: (provided) => ({
+    control: (provided, state) => ({
       ...provided,
       backgroundColor: '#7F9E81',
       opacity: .7,
 			maxHeight: 30,
 			border : 0,
 			color: '#000',
-			width: 138
+      width: 138,
+      borderRadius: 30,
+      boxShadow: state.isFocused ? '#b4cab5 0 0 0 1px' : 'none',
+      borderColor: state.isFocused ? '#b4cab5 0 0 0 1px' : 'none'
 		}),
-
 		indicatorSeparator: (provided) => ({
 			...provided,
 			backgroundColor: '#7F9E81'
 		}),
-
 		singleValue: (provided) => ({
 			...provided,
 			color : '#000',
@@ -39,7 +39,6 @@ export default function Header(props) {
 			whiteSpace : 'nowrap',
 			overflow : 'hidden'
 		}),
-
     placeholder: (provided) => ({
       ...provided,
 			opacity: .4,
@@ -82,7 +81,7 @@ export default function Header(props) {
 				</nav>
 
 				<div className="header__sign-wrapper">
-          <Button type="button" class="header__sign-button" onClick={props.isOpenPopupLogin} text="Войти" />
+          <Button type="button" class="header__sign-button" onClick={props.onOpen} text="Войти" />
 					<a href="####" className="header__sign-link">Зарегистрироваться</a>
 				</div>
 			</div>

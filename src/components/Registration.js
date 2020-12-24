@@ -14,13 +14,13 @@ export default function Registration(props) {
 
 				<label className="form__label" htmlFor="second-name">Отчество<span className="form__require-accent">*</span></label>
 				<input type="text" className="form__input form__input_type_text form__input_popup" placeholder="Введите ваше отчество (при наличии)"/>
-				
+
 				<label className="form__label" htmlFor="second-name">Дата рождения<span className="form__require-accent">*</span></label>
 				<input type="date" className="form__input form__input_type_text form__input_popup" placeholder="__.__.___"/>
 
 				<div className="form__buttons">
 					<button type="submit" className="button form__button">Далее</button>
-					<a href="#" className="form__link">Назад</a>
+					<a href="##" className="form__link">Назад</a>
 				</div>
 			</form>
 			<div className="line">

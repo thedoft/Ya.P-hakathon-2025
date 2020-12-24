@@ -4,12 +4,10 @@ export default function SectionList(props) {
   const [items, setItems] = React.useState([]);
 
   React.useEffect(() => {
-    setItems(
-      (props.middleware) && (props.count)
+    setItems((props.middleware) && (props.count)
       ? props.middleware(props.items, props.count)
-      : props.items
-    );
-  }, [props, items]);
+      : props.items);
+  }, [props]);
 
   const Template = (item) => props.template(item);
 

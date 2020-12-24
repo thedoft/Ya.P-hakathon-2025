@@ -8,5 +8,5 @@
 }
 
 .form__file-button:hover {
-  box-shadow: black 0 0 3px;
+  box-shadow: rgba(127, 158, 129, .7) 0 0 1px 1px;
 }

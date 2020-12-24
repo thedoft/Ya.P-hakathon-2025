@@ -8,8 +8,16 @@ import SectionForm from './SectionForm';
 import { initiatives } from '../data/initiatives';
 
 export default function HomePage() {
+  const [i, setI] = React.useState([]);
+
+  React.useEffect(() => {
+    setI(initiatives);
+  }, []);
+
   function handleFormSubmit(item) {
     initiatives.push(item);
+    setI([...i, item]);
+
     alert('Ваше обращение отправлено!');
   }
 
