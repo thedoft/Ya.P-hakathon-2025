@@ -49,7 +49,10 @@
 @import './blocks/section/__title/section__title.css';
 @import './blocks/section/__title/section__title_home.css';
 @import './blocks/section/__title/section__title_form.css';
-@import './blocks/section/__subtitle/section__subtitle.css';
+@import './blocks/section/__title/section__title_404.css';
+@import './blocks/section/__subtitle/section__subtitle_404.css';
+@import './blocks/section/__text/section__text.css';
+@import './blocks/section/__text/section__text_404.css';
 @import './blocks/section/__link/section__link.css';
 @import './blocks/section/__link/section__link_home.css';
 @import './blocks/section/__list/section__list.css';
