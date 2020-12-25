@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Section from './Section';
 import SectionNews from './SectionNews';
 
-export default function NotFoundPage() {
+export default function NotFoundPage(props) {
   return (
     <>
       <Section class="section_404">
@@ -15,7 +15,7 @@ export default function NotFoundPage() {
         </p>
       </Section>
 
-      <SectionNews middleware={ (items, count) => items.slice(count).reverse() } count="-3" />
+      <SectionNews middleware={props.middleware} count={props.count} />
     </>
   )
 }

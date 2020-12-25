@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function InitiativesPage() {
+import SectionInitiatives from './SectionInitiatives';
+
+export default function InitiativesPage(props) {
   return (
-    <section>
-      
-    </section>
+    <SectionInitiatives middleware={props.middleware} count={props.count}/>
   )
 }

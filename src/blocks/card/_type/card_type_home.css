@@ -14,3 +14,7 @@
   content: '';
   background-image: url(../../../images/ArrowFatRight.png);
 }
+
+.card_type_home:last-of-type {
+  margin: 0;
+}

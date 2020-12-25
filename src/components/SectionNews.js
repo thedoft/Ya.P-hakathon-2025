@@ -17,9 +17,7 @@ export default function SectionNews(props) {
 
       <SectionList items={news} template={CardSmall} middleware={props.middleware} count={props.count} />
 
-      <NavLink to="/news">
-        <Button type="button" class="section__button" text="Больше новостей" />
-      </NavLink>
+      {props.children}
     </Section>
   )
 }

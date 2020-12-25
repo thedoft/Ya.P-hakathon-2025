@@ -21,9 +21,7 @@ export default function SectionInitiatives(props) {
 
       <SectionList items={initiatives} template={CardBig} middleware={props.middleware} count={props.count} />
 
-      <NavLink to="/initiatives">
-        <Button type="button" class="section__button" text="Больше обращений" />
-      </NavLink>
+      {props.children}
     </Section>
   )
 }
