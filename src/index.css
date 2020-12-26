@@ -78,6 +78,7 @@
 @import './blocks/card/__text-wrapper/card__text-wrapper.css';
 @import './blocks/card/__text-wrapper/card__text-wrapper_small.css';
 @import './blocks/card/__text-wrapper/card__text-wrapper_big.css';
+@import './blocks/card/__text-wrapper/card__text__wrapper_no-img.css';
 @import './blocks/card/__text/card__text.css';
 @import './blocks/card/__text/card__text_home.css';
 @import './blocks/card/__content/card__content.css';

@@ -6,7 +6,7 @@ export default function CardBig(props) {
   return (
     <li className="card card_type_big">
       <div className="card__img-wrapper">
-        <img className="card__img card__img_big" src={card.img} alt={card.title} />
+        { card.img ? <img className="card__img card__img_big" src={card.img} alt={card.title} /> : ''}
         <div className="card__info-label-wrapper">
           <span className="card__info-label card__info-label_theme">{card.theme}</span>
           <span className="card__info-label card__info-label_status">{card.status}</span>
@@ -19,7 +19,7 @@ export default function CardBig(props) {
           <p className="card__date">1 мин</p>
         </div>
         <div className="card__gradient-wrapper">
-          <div className="card__text-wrapper card__text-wrapper_big">
+          <div className={`card__text-wrapper card__text-wrapper_big ${card.img ? '' : 'card__text__wrapper_no-img'}`}>
             <p className="card__text">{card.text}</p>
           </div>
           <div className="card__gradient"></div>

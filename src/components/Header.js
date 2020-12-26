@@ -82,7 +82,7 @@ export default function Header(props) {
 
 				<div className="header__sign-wrapper">
           <Button type="button" class="header__sign-button" onClick={props.onOpen} text="Войти" />
-					<a href="####" className="header__sign-link">Зарегистрироваться</a>
+					<a onClick={ () => alert('Скоро можно будет зарегистрироваться!') } href="/#" className="header__sign-link">Зарегистрироваться</a>
 				</div>
 			</div>
     </header>

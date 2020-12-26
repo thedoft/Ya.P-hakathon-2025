@@ -1,17 +1,19 @@
 import React from 'react';
 
+import { useInput } from '../hooks/useInput';
+
 import Popup from './Popup';
 import Button from './Button';
 
 export default function Login(props) {
-  const [login, setLogin] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const { value: login, bind: bindLogin, reset: resetLogin } = useInput('');
+  const { value: password, bind: bindPassword, reset: resetPassword } = useInput('');
 
   React.useEffect(() => {
     if (props.isOpen) {
+      resetLogin();
+      resetPassword();
       document.addEventListener('keyup', props.onEscape);
-      setLogin('');
-      setPassword('');
     }
 
     return () => {
@@ -19,18 +21,8 @@ export default function Login(props) {
     };
   }, [props]);
 
-  function handleLoginChange(evt) {
-    setLogin(evt.target.value);
-  }
-
-  function handlePasswordChange(evt) {
-    setPassword(evt.target.value);
-  }
-
   function handleClose() {
     props.onClose();
-    setLogin('');
-    setPassword('');
   }
 
   function handleLayoutClick(popup) {
@@ -40,11 +32,13 @@ export default function Login(props) {
 	const handleSubmit = (evt) => {
     evt.preventDefault();
 
-    setLogin('');
-    setPassword('');
+    const userLogin = login;
+    const userPassword = password;
 
     props.onClose();
-		alert('Почти вошли')
+
+    alert('Почти вошли')
+    console.log(userLogin, userPassword);
 	}
 
 	return (
@@ -54,14 +48,14 @@ export default function Login(props) {
   				<h2 className="form__title">Вход</h2>
 
           <label className="form__label" htmlFor="login">Логин<span className="form__require-accent">*</span></label>
-  				<input value={login} onChange={handleLoginChange} id="#login" className="form__input form__input_type_text form__input_popup" placeholder="Логином служит адрес вашей эл. почты" autoComplete="user-name" required />
+  				<input {...bindLogin} id="#login" className="form__input form__input_type_text form__input_popup" placeholder="Логином служит адрес вашей эл. почты" autoComplete="user-name" required />
 
   				<label className="form__label" htmlFor="password">Пароль<span className="form__require-accent">*</span></label>
-  				<input value={password} onChange={handlePasswordChange} id="#password" type="password" className="form__input form__input_type_text form__input_popup" placeholder="Введите пароль" autoComplete="current-password" required />
+  				<input {...bindPassword} id="#password" type="password" className="form__input form__input_type_text form__input_popup" placeholder="Введите пароль" autoComplete="current-password" required />
 
           <div className="form__buttons">
             <Button type="submit" class="form__button" text="Войти" />
-  					<a href="##" className="form__link">Зарегистрироваться</a>
+  					<a onClick={ () => alert('Скоро можно будет зарегистрироваться!') } href="/#" className="form__link">Зарегистрироваться</a>
   				</div>
   			</form>
 
