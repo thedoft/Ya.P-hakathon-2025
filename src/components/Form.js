@@ -1,6 +1,8 @@
 import React from 'react';
 import Select, { components } from 'react-select';
 
+import { useInput } from '../hooks/useInput';
+
 import Button from './Button';
 
 import img from '../images/card-img-big.png';
@@ -8,8 +10,11 @@ import caretDown from '../images/caretDown.svg';
 
 export default function Form(props) {
   const selectOptions = [
-    { value : 'Название 1', label : 'Название 1' },
-    { value : 'Название 2', label : 'Название 2' }
+    { value : 'Транспорт', label : 'Транспорт' },
+    { value : 'Жилье', label : 'Жилье' },
+    { value : 'Освещение', label : 'Освещение' },
+    { value : 'Отопление', label : 'Отопление' },
+    { value : 'Мусор', label : 'Мусор' },
   ];
 
   const DropdownIndicator = (props) => {
@@ -20,7 +25,7 @@ export default function Form(props) {
     )
   }
 
-  const customStyles = {
+  const selectStyles = {
     singleValue: (provided) => ({
       ...provided,
       color: '#000'
@@ -42,6 +47,10 @@ export default function Form(props) {
       boxShadow: state.isFocused ? '#7F9E81 0 0 0 1px' : 'none',
       borderColor: state.isFocused ? '#7F9E81' : '#c4c4c4',
       opacity: .6,
+      '&:hover' : {
+        boxShadow: state.isFocused && '#7F9E81 0 0 0 1px',
+        borderColor: state.isFocused && '#7F9E81',
+      }
     }),
     placeholder: (provided) => ({
       ...provided,
@@ -59,29 +68,19 @@ export default function Form(props) {
   }
 
   const [checked, setChecked] = React.useState('gov');
-  const [address, setAddress] = React.useState('');
   const [selectValue, setSelectValue] = React.useState('');
-  const [title, setTitle] = React.useState('');
-  const [text, setText] = React.useState('');
+  
+  const { value: address, bind: bindAddress, reset: resetAddress } = useInput('');
+  const { value: title, bind: bindTitle, reset: resetTitle } = useInput('');
+  const { value: text, bind: bindText, reset: resetText } = useInput('');
+
 
   function handleRadioChange(evt) {
     setChecked(evt.target.value);
   }
 
-  function handleAddressChange(evt) {
-    setAddress(evt.target.value);
-  }
-
   function HandleSelectChange(inputValue) {
     setSelectValue(inputValue);
-  }
-
-  function handleTextChange(evt) {
-    setText(evt.target.value);
-  }
-
-  function handleTitleChange(evt) {
-    setTitle(evt.target.value);
   }
 
   function handleSubmit(evt) {
@@ -89,27 +88,30 @@ export default function Form(props) {
 
     const card = {
       img: img,
-      title: selectValue.value,
-      text,
+      theme: selectValue.value,
       address,
+      title,
+      text,
+      status: 'В работе'
     };
 
     props.onSubmit(card);
 
-    setAddress('');
+    resetAddress('');
     setSelectValue('');
-    setText('');
+    resetTitle('');
+    resetText('');
   }
 
   return (
     <form className="form" action="#" onSubmit={handleSubmit} id="form">
       <label className="form__label" htmlFor="address">Адрес, где необходимо провести работу по обращению<span className="form__require-accent">*</span></label>
-      <input value={address} onChange={handleAddressChange} id="#address" className="form__input form__input_type_text" placeholder="Введите адрес" required />
+      <input {...bindAddress} id="#address" className="form__input form__input_type_text" placeholder="Введите адрес" required />
 
       <label className="form__label" htmlFor="title">Тема обращения<span className="form__require-accent">*</span></label>
       <Select id="title"
         components={{ DropdownIndicator }}
-        styles={customStyles}
+        styles={selectStyles}
         options={selectOptions}
         placeholder='Выберите тип обращения'
         value={selectValue}
@@ -117,7 +119,7 @@ export default function Form(props) {
         required />
 
       <label className="form__label" htmlFor="title">Название обращение<span className="form__require-accent">*</span></label>
-      <input value={title} onChange={handleTitleChange} id="#title" className="form__input form__input_type_text" placeholder="Введите название обращения" required />
+      <input {...bindTitle} id="#title" className="form__input form__input_type_text" placeholder="Введите название обращения" required />
 
       <label className="form__label" htmlFor="text">Текст обращения<span className="form__require-accent">*</span></label>
       <textarea id="text" className="form__input form__input_type_textarea"
@@ -125,8 +127,7 @@ export default function Form(props) {
         placeholder="Введите текст обращения.
 Пожалуйста, придерживайтесь правила 1 обращение — 1 идея.
 В противном случае обращение будет отклонено."
-        value={text}
-        onChange={handleTextChange}
+        {...bindText}
         required
       />
 

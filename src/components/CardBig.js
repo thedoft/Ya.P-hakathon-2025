@@ -8,8 +8,8 @@ export default function CardBig(props) {
       <div className="card__img-wrapper">
         <img className="card__img card__img_big" src={card.img} alt={card.title} />
         <div className="card__info-label-wrapper">
-          <span className="card__info-label card__info-label_theme">Транспорт</span>
-          <span className="card__info-label card__info-label_status">В работе</span>
+          <span className="card__info-label card__info-label_theme">{card.theme}</span>
+          <span className="card__info-label card__info-label_status">{card.status}</span>
         </div>
         <span className="card__info-label card__info-label_files">3</span>
       </div>
