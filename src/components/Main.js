@@ -18,21 +18,27 @@ export default function Main() {
         <Route exact path="/">
           <HomePage middleware={sectionListMiddleware} />
         </Route>
+
         <Route path="/social">
           <InDevPage title="Соцсети" />
         </Route>
+
         <Route path="/faq">
           <InDevPage title="Частые вопросы" />
         </Route>
+
         <Route path="/support">
           <InDevPage title="Поддержка" />
         </Route>
+
         <Route path="/news">
         <NewsPage middleware={sectionListMiddleware} count="-9" />
         </Route>
+
         <Route path="/initiatives">
           <InitiativesPage middleware={sectionListMiddleware} count="-6" />
         </Route>
+        
         <Route path="*">
           <NotFoundPage middleware={sectionListMiddleware} count="-3" />
         </Route>

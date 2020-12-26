@@ -1,0 +1,10 @@
+.card__info-label_files {
+  padding: 4px 8px 4px 32px;
+  position: absolute;
+  top: 28px;
+  right: 16px;
+  background-color: #FFF8F3;
+  background-image:  url(../../../images/files.svg);
+  border: 1px solid #7c7c7c;
+  border-radius: 16px;
+}

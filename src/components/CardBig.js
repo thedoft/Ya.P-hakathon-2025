@@ -5,7 +5,14 @@ export default function CardBig(props) {
 
   return (
     <li className="card card_type_big">
-      <img className="card__img card__img_big" src={card.img} alt={card.title} />
+      <div className="card__img-wrapper">
+        <img className="card__img card__img_big" src={card.img} alt={card.title} />
+        <div className="card__info-label-wrapper">
+          <span className="card__info-label card__info-label_theme">Транспорт</span>
+          <span className="card__info-label card__info-label_status">В работе</span>
+        </div>
+        <span className="card__info-label card__info-label_files">3</span>
+      </div>
       <div className="card__content card__content_big">
         <div className="card__info">
           <h3 className="card__title card__title_big">{card.title}</h3>

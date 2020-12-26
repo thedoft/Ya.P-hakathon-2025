@@ -1,0 +1,9 @@
+.card__info-label {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 4px 12px 4px 32px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 20px;
+}

@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 import Section from './Section';
 import SectionList from './SectionList';
-import Button from './Button';
 import InfoItem from './InfoItem';
 import CardBig from './CardBig';
 

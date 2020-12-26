@@ -66,6 +66,12 @@
 @import './blocks/card/_type/card_type_home.css';
 @import './blocks/card/_type/card_type_small.css';
 @import './blocks/card/_type/card_type_big.css';
+@import './blocks/card/__img-wrapper/card__img-wrapper.css';
+@import './blocks/card/__info-label-wrapper/card__info-label-wrapper.css';
+@import './blocks/card/__info-label/card__info-label.css';
+@import './blocks/card/__info-label/card__info-label_theme.css';
+@import './blocks/card/__info-label/card__info-label_status.css';
+@import './blocks/card/__info-label/card__info-label_files.css';
 @import './blocks/card/__img/card__img.css';
 @import './blocks/card/__gradient-wrapper/card__gradient-wrapper.css';
 @import './blocks/card/__gradient/card__gradient.css';
