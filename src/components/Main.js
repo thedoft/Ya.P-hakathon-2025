@@ -36,9 +36,9 @@ export default function Main() {
         </Route>
 
         <Route path="/initiatives">
-          <InitiativesPage middleware={sectionListMiddleware} count="-6" />
+          <InitiativesPage middleware={sectionListMiddleware} count="-11" />
         </Route>
-        
+
         <Route path="*">
           <NotFoundPage middleware={sectionListMiddleware} count="-3" />
         </Route>

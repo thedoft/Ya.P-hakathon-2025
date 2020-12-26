@@ -6,7 +6,10 @@ import SectionNews from './SectionNews';
 import SectionInitiatives from './SectionInitiatives';
 import SectionForm from './SectionForm';
 import Button from './Button';
+import SectionList from './SectionList';
+import InfoItem from './InfoItem';
 
+import { infoItems } from '../data/infoItems';
 import { initiatives } from '../data/initiatives';
 
 export default function HomePage(props) {
@@ -34,6 +37,8 @@ export default function HomePage(props) {
       </SectionNews>
 
       <SectionInitiatives middleware={props.middleware} count="-3" >
+        <SectionList class="section__list_info" items={infoItems} template={InfoItem} />
+
         <NavLink to="/initiatives">
           <Button type="button" class="section__button" text="Больше обращений" />
         </NavLink>

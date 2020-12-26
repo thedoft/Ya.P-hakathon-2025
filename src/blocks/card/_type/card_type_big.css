@@ -1,6 +1,7 @@
 .card_type_big {
   border: 1px solid rgba(0, 0, 0, .6);
   margin-bottom: 25px;
+  height: 549px;
 }
 
 .card_type_big:nth-child(3n) {
