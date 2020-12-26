@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Select, { components } from 'react-select';
 
 import { useInput } from '../hooks/useInput';
 
 import Button from './Button';
 
-import img from '../images/card-img-big.png';
 import caretDown from '../images/caretDown.svg';
 
 export default function Form(props) {
@@ -67,9 +66,11 @@ export default function Form(props) {
     }),
   }
 
-  const [checked, setChecked] = React.useState('gov');
-  const [selectValue, setSelectValue] = React.useState('');
-  
+  const [checked, setChecked] = useState('gov');
+  const [selectValue, setSelectValue] = useState('');
+  const [img, setImg] = useState('');
+  const [fileText, setFileText] = useState('Можно добавить до 5 файлов. Общий объем не более 1 Гб');
+
   const { value: address, bind: bindAddress, reset: resetAddress } = useInput('');
   const { value: title, bind: bindTitle, reset: resetTitle } = useInput('');
   const { value: text, bind: bindText, reset: resetText } = useInput('');
@@ -83,16 +84,35 @@ export default function Form(props) {
     setSelectValue(inputValue);
   }
 
+  let fileList = [];
+
+  function handleFileChange(evt) {
+    fileList = evt.target.files;
+    setFileText(`Выбрано файлов: ${fileList.length}`);
+
+    fileList.length > 0 && readImage(fileList[0]);
+  }
+
+  function readImage(file) {
+    const reader = new FileReader();
+    reader.addEventListener('load', (evt) => {
+      setImg(evt.target.result);
+    });
+    reader.readAsDataURL(file);
+  }
+
   function handleSubmit(evt) {
     evt.preventDefault();
 
     const card = {
-      img: img,
+      img,
       theme: selectValue.value,
       address,
       title,
       text,
-      status: 'В работе'
+      fileListLength: fileList.length,
+      status: 'В работе',
+      time: new Date().getTime(),
     };
 
     props.onSubmit(card);
@@ -101,6 +121,8 @@ export default function Form(props) {
     setSelectValue('');
     resetTitle('');
     resetText('');
+    setImg('');
+    setFileText('Можно добавить до 5 файлов. Общий объем не более 1 Гб');
   }
 
   return (
@@ -134,9 +156,9 @@ export default function Form(props) {
       <div className="form__file-container">
         <div className="form__file-button">
           <label htmlFor="file" className="form__label form__label_type_file">Добавить файл</label>
-          <input type="file" className="form__input form__input_type_file" id="file" />
+          <input onChange={handleFileChange} accept=".jpg, .jpeg, .png" type="file" className="form__input form__input_type_file" id="file" multiple />
         </div>
-        <p className="form__file-text">Можно добавить до 5 файлов. Общий объем не более 1 Гб</p>
+        <p className="form__file-text">{fileText}</p>
       </div>
 
       <p className="form__text">Кому направлено обращение?<span className="form__require-accent">*</span></p>

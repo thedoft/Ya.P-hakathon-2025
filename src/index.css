@@ -73,6 +73,7 @@
 @import './blocks/card/__info-label/card__info-label_status.css';
 @import './blocks/card/__info-label/card__info-label_files.css';
 @import './blocks/card/__img/card__img.css';
+@import './blocks/card/__img/card__img_big.css';
 @import './blocks/card/__gradient-wrapper/card__gradient-wrapper.css';
 @import './blocks/card/__gradient/card__gradient.css';
 @import './blocks/card/__text-wrapper/card__text-wrapper.css';

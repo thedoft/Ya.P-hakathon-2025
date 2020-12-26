@@ -9,6 +9,8 @@ export const initiatives = [
     address: 'Московская обл, г. Пушкин, ул. Кукушкина',
     theme: 'Транспорт',
     status: 'Выполнено',
+    fileListLength: 0,
+    time: 1609075000000,
   },
   {
     img: cardImgBig,
@@ -17,6 +19,8 @@ export const initiatives = [
     address: 'Московская обл, г. Пушкин, ул. Кукушкина',
     theme: 'Мусор',
     status: 'Отказ',
+    fileListLength: 2,
+    time: 1609083000000,
   },
   {
     img: cardImgBig_2,
@@ -25,6 +29,8 @@ export const initiatives = [
     address: 'Московская обл, г. Пушкин, ул. Кукушкина',
     theme: 'Освещение',
     status: 'Выполнено',
+    fileListLength: 3,
+    time: 1609087000000,
   },
   {
     img: '',
@@ -33,6 +39,8 @@ export const initiatives = [
     address: 'Московская обл, г. Пушкин, ул. Кукушкина',
     theme: 'Отопление',
     status: 'Отказ',
+    fileListLength: 0,
+    time: 1609090000000,
   },
   {
     img: cardImgBig_2,
@@ -48,6 +56,8 @@ export const initiatives = [
     address: 'Московская обл, г. Пушкин, ул. Кукушкина',
     theme: 'Жилье',
     status: 'В работе',
+    fileListLength: 1,
+    time: 1609094000000,
   },
   {
     img: '',
@@ -74,6 +84,8 @@ export const initiatives = [
     address: 'Московская обл, г. Пушкин, ул. Кукушкина',
     theme: 'Транспорт',
     status: 'Выполнено',
+    fileListLength: 0,
+    time: 1609098000000,
   },
   {
     img: cardImgBig,
@@ -86,5 +98,7 @@ export const initiatives = [
     address: 'Московская обл, г. Пушкин, ул. Кукушкина',
     theme: 'Мусор',
     status: 'Отказ',
+    fileListLength: 3,
+    time: 1609100000000,
   },
 ]

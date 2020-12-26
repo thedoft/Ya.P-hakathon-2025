@@ -1,7 +1,11 @@
 import React from 'react';
+import TimeAgo from 'react-timeago';
+import ruStrings from 'react-timeago/lib/language-strings/ru';
+import buildFormatter from 'react-timeago/lib/formatters/buildFormatter';
 
 export default function CardBig(props) {
   const card = props.item;
+  const formatter = buildFormatter(ruStrings);
 
   return (
     <li className="card card_type_big">
@@ -11,12 +15,12 @@ export default function CardBig(props) {
           <span className="card__info-label card__info-label_theme">{card.theme}</span>
           <span className="card__info-label card__info-label_status">{card.status}</span>
         </div>
-        <span className="card__info-label card__info-label_files">3</span>
+        <span className="card__info-label card__info-label_files">{card.fileListLength}</span>
       </div>
       <div className="card__content card__content_big">
         <div className="card__info">
           <h3 className="card__title card__title_big">{card.title}</h3>
-          <p className="card__date">1 мин</p>
+          <TimeAgo className="card__date" date={card.time} formatter={formatter} />
         </div>
         <div className="card__gradient-wrapper">
           <div className={`card__text-wrapper card__text-wrapper_big ${card.img ? '' : 'card__text__wrapper_no-img'}`}>
