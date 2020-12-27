@@ -1,6 +1,8 @@
 import cardImgBig from '../images/card-img-big.png';
 import cardImgBig_2 from '../images/card-img-big-2.png';
 
+const date = new Date().getTime();
+
 export const initiatives = [
   {
     img: cardImgBig_2,
@@ -10,7 +12,7 @@ export const initiatives = [
     theme: 'Транспорт',
     status: 'Выполнено',
     fileListLength: 4,
-    time: 1609066000000,
+    time: Number(date - 15000000),
   },
   {
     img: cardImgBig,
@@ -20,7 +22,7 @@ export const initiatives = [
     theme: 'Транспорт',
     status: 'Выполнено',
     fileListLength: 5,
-    time: 1609071000000,
+    time: Number(date - 9000000),
   },
   {
     img: cardImgBig_2,
@@ -30,7 +32,7 @@ export const initiatives = [
     theme: 'Транспорт',
     status: 'Выполнено',
     fileListLength: 4,
-    time: 1609066000000,
+    time: Number(date - 7500000),
   },
   {
     img: cardImgBig,
@@ -40,7 +42,7 @@ export const initiatives = [
     theme: 'Транспорт',
     status: 'Выполнено',
     fileListLength: 5,
-    time: 1609071000000,
+    time: Number(date - 6900000),
   },
   {
     img: '',
@@ -50,7 +52,7 @@ export const initiatives = [
     theme: 'Транспорт',
     status: 'Выполнено',
     fileListLength: 0,
-    time: 1609075000000,
+    time: Number(date - 6200000),
   },
   {
     img: cardImgBig,
@@ -60,7 +62,7 @@ export const initiatives = [
     theme: 'Мусор',
     status: 'Отказ',
     fileListLength: 2,
-    time: 1609083000000,
+    time: Number(date - 5400000),
   },
   {
     img: cardImgBig_2,
@@ -70,7 +72,7 @@ export const initiatives = [
     theme: 'Освещение',
     status: 'Выполнено',
     fileListLength: 3,
-    time: 1609087000000,
+    time: Number(date - 4200000),
   },
   {
     img: '',
@@ -80,7 +82,7 @@ export const initiatives = [
     theme: 'Отопление',
     status: 'Отказ',
     fileListLength: 0,
-    time: 1609090000000,
+    time: Number(date - 3000000),
   },
   {
     img: cardImgBig_2,
@@ -97,7 +99,7 @@ export const initiatives = [
     theme: 'Жилье',
     status: 'В работе',
     fileListLength: 1,
-    time: 1609094000000,
+    time: Number(date - 2500000),
   },
   {
     img: '',
@@ -125,7 +127,7 @@ export const initiatives = [
     theme: 'Транспорт',
     status: 'Выполнено',
     fileListLength: 0,
-    time: 1609098000000,
+    time: Number(date - 900000),
   },
   {
     img: cardImgBig,
@@ -139,6 +141,6 @@ export const initiatives = [
     theme: 'Мусор',
     status: 'Отказ',
     fileListLength: 3,
-    time: 1609100000000,
+    time: Number(date - 300000),
   },
 ]
