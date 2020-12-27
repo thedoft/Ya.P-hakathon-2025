@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import Select, { components } from 'react-select';
 
 import { useInput } from '../hooks/useInput';
+import getPoems from '../api/api';
 
 import Button from './Button';
 
 import caretDown from '../images/caretDown.svg';
 
 export default function Form(props) {
+
   const selectOptions = [
     { value : 'Транспорт', label : 'Транспорт' },
-    { value : 'Жилье', label : 'Жилье' },
+    { value : 'Безопасность', label : 'Безопасность' },
     { value : 'Освещение', label : 'Освещение' },
     { value : 'Отопление', label : 'Отопление' },
     { value : 'Мусор', label : 'Мусор' },
@@ -66,6 +68,7 @@ export default function Form(props) {
     }),
   }
 
+  const [text, setText] = useState('');
   const [checked, setChecked] = useState('gov');
   const [selectValue, setSelectValue] = useState('');
   const [img, setImg] = useState('');
@@ -73,8 +76,10 @@ export default function Form(props) {
 
   const { value: address, bind: bindAddress, reset: resetAddress } = useInput('');
   const { value: title, bind: bindTitle, reset: resetTitle } = useInput('');
-  const { value: text, bind: bindText, reset: resetText } = useInput('');
 
+  function handleTextChange(evt) {
+    setText(evt.target.value);
+  }
 
   function handleRadioChange(evt) {
     setChecked(evt.target.value);
@@ -104,25 +109,36 @@ export default function Form(props) {
   function handleSubmit(evt) {
     evt.preventDefault();
 
-    const card = {
-      img,
-      theme: selectValue.value,
-      address,
-      title,
-      text,
-      fileListLength: fileList.length,
-      status: 'В работе',
-      time: new Date().getTime(),
-    };
+    const words = text.split(' ');
 
-    props.onSubmit(card);
-
-    resetAddress('');
-    setSelectValue('');
-    resetTitle('');
-    resetText('');
-    setImg('');
-    setFileText('Можно добавить до 5 файлов. Общий объем не более 1 Гб');
+    getPoems(words)
+      .then((data) => {
+        return data[Math.floor(Math.random() * data.length)].fields.text;
+      })
+      .then((randomPoemText) => {
+        props.onSubmit({
+          img,
+          theme: selectValue.value,
+          address,
+          title,
+          text: randomPoemText,
+          fileListLength: fileList.length,
+          status: 'В работе',
+          time: new Date().getTime(),
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        alert('Ошибка, попробуйте другое первое слово!');
+      })
+      .finally(() => {
+        resetAddress();
+        setSelectValue('');
+        resetTitle();
+        setText('');
+        setImg('');
+        setFileText('Можно добавить до 5 файлов. Общий объем не более 1 Гб');
+      });
   }
 
   return (
@@ -149,7 +165,8 @@ export default function Form(props) {
         placeholder="Введите текст обращения.
 Пожалуйста, придерживайтесь правила 1 обращение — 1 идея.
 В противном случае обращение будет отклонено."
-        {...bindText}
+        value={text}
+        onChange={handleTextChange}
         required
       />
 
@@ -164,7 +181,7 @@ export default function Form(props) {
       <p className="form__text">Кому направлено обращение?<span className="form__require-accent">*</span></p>
 
       <div className="form__radio-container">
-        <input className="form__input form__input_type_radio" type="radio" name="where" id="gov" value="gov" checked={checked === 'gov'} onChange={handleRadioChange} />
+        <input className="form__input form__input_type_radio" type="radio" name="where" id="gov" value="gov" checked={checked === 'gov'} onChange={handleRadioChange} required />
         <label className="form__label form__label_type_radio" htmlFor="gov">Ведомству</label>
         <input className="form__input form__input_type_radio" type="radio" name="where" id="people" value="people" checked={checked === 'people'} onChange={handleRadioChange} />
         <label className="form__label form__label_type_radio" htmlFor="people">Людям</label>

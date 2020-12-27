@@ -31,7 +31,7 @@ export default function HomePage(props) {
       <SectionHome />
 
       <SectionNews middleware={props.middleware} count="-5" >
-        <NavLink to="/news">
+        <NavLink to="/news" className="section__link">
           <Button type="button" class="section__button" text="Больше новостей" />
         </NavLink>
       </SectionNews>
@@ -39,7 +39,7 @@ export default function HomePage(props) {
       <SectionInitiatives middleware={props.middleware} count="-3" >
         <SectionList class="section__list_info" items={infoItems} template={InfoItem} />
 
-        <NavLink to="/initiatives">
+        <NavLink to="/initiatives" className="section__link">
           <Button type="button" class="section__button" text="Больше обращений" />
         </NavLink>
       </SectionInitiatives>
