@@ -1,5 +1,5 @@
 function api(query) {
-  return fetch(`http://www.buymebuyme.xyz?q=${query}`, {
+  return fetch(`https://www.buymebuyme.xyz?q=${query}`, {
     headers: {
       'Content-Type': 'application/json'
     }
