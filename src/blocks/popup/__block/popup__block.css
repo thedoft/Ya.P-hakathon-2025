@@ -1,0 +1,7 @@
+.popup__block{
+	min-width: 685px;
+	border-radius: 30px;
+	background-color: #FFF8F3;
+	position: relative;
+	padding: 28px 28px 39px;
+}

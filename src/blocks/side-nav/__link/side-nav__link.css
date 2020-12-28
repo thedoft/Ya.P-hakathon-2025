@@ -1,0 +1,12 @@
+.side-nav__link {
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, .7);
+}
+
+.side-nav__link:hover {
+  text-decoration: underline;
+  color: #FFEBDA;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}

@@ -1,0 +1,8 @@
+.scrollbar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 79px;
+  top: 356px;
+}

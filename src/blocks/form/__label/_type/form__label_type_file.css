@@ -1,0 +1,8 @@
+.form__label_type_file {
+  line-height: 36px;
+  padding: 8px 22px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  position: static;
+  color: rgba(127, 158, 129, .8);
+}

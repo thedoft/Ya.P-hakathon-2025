@@ -1,0 +1,7 @@
+.section_home {
+  background: #B4CAB5;
+  padding: 0 158px;
+  margin: 0 0 42px;
+  height: 924px;
+  clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+}

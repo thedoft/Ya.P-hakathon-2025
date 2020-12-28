@@ -1,0 +1,16 @@
+.form__label {
+  height: 27px;
+  border-radius: 10px;
+  position: relative;
+  left: 24px;
+  top: 7px;
+  background: #FFF8F3;
+  z-index: 1;
+  align-self: flex-start;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, .7);
+  padding: 4px 12px;
+  box-sizing: border-box;
+}

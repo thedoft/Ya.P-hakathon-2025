@@ -1,0 +1,11 @@
+.button{
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 30px;
+}
+
+.button:hover,
+.button:focus {
+  outline: none;
+}
